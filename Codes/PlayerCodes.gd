@@ -49,21 +49,25 @@ var max_hp : int = 10
 var score : int = 0
 
 #Physics
-var movementSpeed : float = 5
-var jumpForce : float = 5
-var gravity : float = -9.8
+var movementSpeed : float = 50
+var jumpForce : float = 10
+var gravity : float = 40
 
 #Cam look
 var minLookAngle : float = -90
 var maxLookAngle : float = 90
-var loookSensitivity : float = 10
+var loookSensitivity : float = 20
 
 #Vectors
-var vel : Vector3 = Vector3() 
-var mouseDelta : Vector2 = Vector2()
+var vel = Vector3() 
+var mouseDelta = Vector2()
 
 #components
 onready var camera : Camera = get_node("Camera")
+
+func _ready():
+	#hide and lock mouse cursor
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) 
 
 func _physics_process(delta):
 	#set X and Y velocities to 0
@@ -74,13 +78,13 @@ func _physics_process(delta):
 	
 	#Movement Inputs
 	if Input.is_action_pressed("move_forward"):
-		input.z -= 1
+		input.y += 1
 	if Input.is_action_pressed("move_back"):
-		input.z += 1
+		input.y -= 1
 	if Input.is_action_pressed("move_left"):
-		input.x -= 1
-	if Input.is_action_pressed("move_right"):
 		input.x += 1
+	if Input.is_action_pressed("move_right"):
+		input.x -= 1
 	
 	input = input.normalized()
 	
@@ -98,8 +102,22 @@ func _physics_process(delta):
 	vel.y -= gravity * delta
 	
 	#move player
-	vel = move_and_slide(vel, Vector3.UP)
+	vel = move_and_slide(vel, Vector3(0,1,0))
 	
 	#jumping
 	if Input.is_action_pressed("jump") and is_on_floor():
 		vel.y = jumpForce
+
+func _process(delta):
+	#rotate the camera along the x axis
+	camera.rotation_degrees.x -= mouseDelta.y * loookSensitivity * delta
+	#clamp the camera rotation
+	camera.rotation_degrees.x = clamp(camera.rotation_degrees.x, minLookAngle, maxLookAngle)
+	#rotate player along y axis
+	rotation_degrees.y -= mouseDelta.x * loookSensitivity * delta
+	#reset the mouse delta vector
+	mouseDelta = Vector2()
+
+func _input(event):
+	if event is InputEventMouseMotion:
+		mouseDelta = event.relative

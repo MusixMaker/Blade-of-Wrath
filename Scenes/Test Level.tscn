@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/Large Wall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Concave Wall.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scenes/SmallWall.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/TightConvexWall.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Stairs.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Lamp.tscn" type="PackedScene" id=9]
 
 [node name="Level" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0 )
@@ -1080,9 +1081,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 2, 4 )
 [node name="Diagonal Floor130" parent="Roof/Diagonal Roof" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 29, 3, 3 )
 
-[node name="Player" parent="." instance=ExtResource( 5 )]
-transform = Transform( -1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -7, 0.886721, 0 )
-
 [node name="Stairs" type="Spatial" parent="."]
 
 [node name="Stairs" parent="Stairs" instance=ExtResource( 8 )]
@@ -1090,3 +1088,17 @@ transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 23, 0, 
 
 [node name="Stairs2" parent="Stairs" instance=ExtResource( 8 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 33, 0, -1.58151e-06 )
+
+[node name="Lamps" type="Spatial" parent="."]
+
+[node name="Lamp" parent="Lamps" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 6 )
+
+[node name="Lamp2" parent="Lamps" instance=ExtResource( 9 )]
+transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -1, 0, 6 )
+
+[node name="Lamp3" parent="Lamps" instance=ExtResource( 9 )]
+transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -13, 0, 6 )
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -7, 0.886721, 0 )
