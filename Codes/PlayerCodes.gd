@@ -51,7 +51,7 @@ var score : int = 0
 #Physics
 var movementSpeed : float = 50
 var jumpForce : float = 10
-var gravity : float = 40
+var gravity : float = 41
 
 #Cam look
 var minLookAngle : float = -90

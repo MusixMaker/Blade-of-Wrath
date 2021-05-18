@@ -6,7 +6,7 @@
 extents = Vector3( 3.51072, 1.20264, 0.230474 )
 
 [sub_resource type="BoxShape" id=2]
-extents = Vector3( 2.04602, 0.097516, 0.49012 )
+extents = Vector3( 2.04602, 0.001, 0.207961 )
 
 [node name="StaticBody" type="StaticBody"]
 
@@ -17,5 +17,5 @@ shape = SubResource( 1 )
 [node name="wall_large" parent="." instance=ExtResource( 1 )]
 
 [node name="CollisionShapeFloor" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0572869, -0.592345 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0127671, 0.0771794, -0.592345 )
 shape = SubResource( 2 )

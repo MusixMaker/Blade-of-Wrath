@@ -7,16 +7,16 @@ height = 2.0
 
 [sub_resource type="CylinderShape" id=2]
 radius = 1.46581
-height = 0.095953
+height = 0.002
 
 [node name="TightConvexWall" type="StaticBody"]
 
-[node name="CollisionShape" type="CollisionShape" parent="."]
+[node name="CollisionShapeBody" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.82026, 1, 0.838631 )
 shape = SubResource( 1 )
 
 [node name="convex_wall_tight" parent="." instance=ExtResource( 1 )]
 
-[node name="CollisionShape2" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.552766, 0.033264, 0.685381 )
+[node name="CollisionShapeFloor" type="CollisionShape" parent="."]
+transform = Transform( 1.06066, 0, -1.06066, 0, 1, 0, 1.06066, 0, 1.06066, 1.21701, 0.033264, 1.19984 )
 shape = SubResource( 2 )
