@@ -49,9 +49,9 @@ var max_hp : int = 10
 var score : int = 0
 
 #Physics
-var movementSpeed : float = 50
-var jumpForce : float = 10
-var gravity : float = 41
+var movementSpeed : float = 10
+var jumpForce : float = 5
+var gravity : float = 15
 
 #Cam look
 var minLookAngle : float = -90
@@ -70,9 +70,11 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) 
 
 func _physics_process(delta):
+	print(is_on_floor())
 	#set X and Y velocities to 0
 	vel.x = 0
 	vel.z = 0
+	movementSpeed = 5
 	
 	var input = Vector2()
 	
@@ -85,6 +87,8 @@ func _physics_process(delta):
 		input.x += 1
 	if Input.is_action_pressed("move_right"):
 		input.x -= 1
+	if Input.is_action_pressed("sprint"):
+		movementSpeed = 10
 	
 	input = input.normalized()
 	
@@ -102,7 +106,7 @@ func _physics_process(delta):
 	vel.y -= gravity * delta
 	
 	#move player
-	vel = move_and_slide(vel, Vector3(0,1,0))
+	vel = move_and_slide(vel, Vector3(1,1,0))
 	
 	#jumping
 	if Input.is_action_pressed("jump") and is_on_floor():
