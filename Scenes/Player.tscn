@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Codes/PlayerCodes.gd" type="Script" id=1]
 
-[sub_resource type="CapsuleShape" id=3]
+[sub_resource type="CapsuleShape" id=1]
 radius = 0.3
 height = 0.5
 
@@ -14,7 +14,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0557524, 0.0510656 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.102474, 0 )
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.184183, 0.354469 )

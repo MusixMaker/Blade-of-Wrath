@@ -62,14 +62,8 @@ transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26, 0, 
 [node name="Large Wall34" parent="Walls/LargeWalls" instance=ExtResource( 1 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 27, 2, -10 )
 
-[node name="Large Wall35" parent="Walls/LargeWalls" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26, 0, -14 )
-
 [node name="Large Wall36" parent="Walls/LargeWalls" instance=ExtResource( 1 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 27, 2, -14 )
-
-[node name="Large Wall37" parent="Walls/LargeWalls" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26, 0, -18 )
 
 [node name="Large Wall38" parent="Walls/LargeWalls" instance=ExtResource( 1 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 27, 2, -18 )
@@ -83,14 +77,8 @@ transform = Transform( 1.94707e-07, 0, -1, 0, 1, 0, 1, 0, 1.94707e-07, 20, 0, -1
 [node name="Large Wall41" parent="Walls/LargeWalls" instance=ExtResource( 1 )]
 transform = Transform( 1.94707e-07, 0, -1, 0, 1, 0, 1, 0, 1.94707e-07, 19, 2, -10 )
 
-[node name="Large Wall42" parent="Walls/LargeWalls" instance=ExtResource( 1 )]
-transform = Transform( 1.94707e-07, 0, -1, 0, 1, 0, 1, 0, 1.94707e-07, 20, 0, -14 )
-
 [node name="Large Wall43" parent="Walls/LargeWalls" instance=ExtResource( 1 )]
 transform = Transform( 1.94707e-07, 0, -1, 0, 1, 0, 1, 0, 1.94707e-07, 19, 2, -14 )
-
-[node name="Large Wall44" parent="Walls/LargeWalls" instance=ExtResource( 1 )]
-transform = Transform( 1.94707e-07, 0, -1, 0, 1, 0, 1, 0, 1.94707e-07, 20, 0, -18 )
 
 [node name="Large Wall45" parent="Walls/LargeWalls" instance=ExtResource( 1 )]
 transform = Transform( 1.94707e-07, 0, -1, 0, 1, 0, 1, 0, 1.94707e-07, 19, 2, -18 )
@@ -214,6 +202,12 @@ transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 28, 0, 
 [node name="SmallWall11" parent="Walls/SmallWalls" instance=ExtResource( 6 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 28, 4, -21 )
 
+[node name="SmallWall18" parent="Walls/SmallWalls" instance=ExtResource( 6 )]
+transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 25, 1.97877, -21 )
+
+[node name="SmallWall19" parent="Walls/SmallWalls" instance=ExtResource( 6 )]
+transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 21, 1.97877, -21 )
+
 [node name="SmallWall12" parent="Walls/SmallWalls" instance=ExtResource( 6 )]
 transform = Transform( 7.54979e-08, 0, -1, 0, 1, 0, 1, 0, 7.54979e-08, 18, 4, -21 )
 
@@ -299,6 +293,12 @@ transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 16, 0, 7 
 [node name="Concave Wall7" parent="Walls/ConcaveWall" instance=ExtResource( 2 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 30.0282, 0, -6.99977 )
 
+[node name="Concave Wall13" parent="Walls/ConcaveWall" instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 26.0282, -0.0286098, -12.9998 )
+
+[node name="Concave Wall14" parent="Walls/ConcaveWall" instance=ExtResource( 2 )]
+transform = Transform( 1.94707e-07, 0, -1, 0, 1, 0, 1, 0, 1.94707e-07, 20.0282, -0.0286098, -12.9998 )
+
 [node name="Concave Wall9" parent="Walls/ConcaveWall" instance=ExtResource( 2 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 45.0282, 2, -4.99977 )
 
@@ -325,6 +325,12 @@ transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 30, 8, 
 
 [node name="Concave Wall20" parent="Walls/ConcaveWall" instance=ExtResource( 2 )]
 transform = Transform( 7.54979e-08, 0, -1, 0, 1, 0, 1, 0, 7.54979e-08, 16, 8, -33 )
+
+[node name="Concave Wall21" parent="Walls/ConcaveWall" instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 27.0282, 1.97139, -20.9998 )
+
+[node name="Concave Wall22" parent="Walls/ConcaveWall" instance=ExtResource( 2 )]
+transform = Transform( 1.94707e-07, 0, -1, 0, 1, 0, 1, 0, 1.94707e-07, 19.0282, 1.97139, -20.9998 )
 
 [node name="Floors" type="Spatial" parent="."]
 
