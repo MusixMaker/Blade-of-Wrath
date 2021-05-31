@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scenes/Large Wall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Concave Wall.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scenes/SmallWall.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/TightConvexWall.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Stairs.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/EnemyStabby.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Portal.tscn" type="PackedScene" id=10]
 
 [node name="Level" type="Spatial"]
@@ -1482,3 +1483,11 @@ transform = Transform( -1.00536e-07, 0, -2.3, 0, 2.3, 0, 2.3, 0, -1.00536e-07, 2
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7, 1, 0 )
+
+[node name="Enemies" type="Spatial" parent="."]
+
+[node name="EnemyStabby" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 41, 2, -3 )
+
+[node name="EnemyStabby2" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 41, 2, 3 )
