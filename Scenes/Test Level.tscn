@@ -1487,7 +1487,7 @@ transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7, 1, 
 [node name="Enemies" type="Spatial" parent="."]
 
 [node name="EnemyStabby" parent="Enemies" instance=ExtResource( 9 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 41, 2, -3 )
+transform = Transform( -6.99382e-09, 0, -0.16, 0, 0.16, 0, 0.16, 0, -6.99382e-09, 42, 2, 2 )
 
 [node name="EnemyStabby2" parent="Enemies" instance=ExtResource( 9 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 41, 2, 3 )
+transform = Transform( -6.99382e-09, 0, -0.16, 0, 0.16, 0, 0.16, 0, -6.99382e-09, 42, 2, -2 )
