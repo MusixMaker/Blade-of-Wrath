@@ -1,11 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Codes/PlayerCodes.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/EnemyStabby.tscn" type="PackedScene" id=2]
 
 [sub_resource type="CapsuleShape" id=1]
-radius = 0.3
-height = 0.5
+radius = 0.390775
+height = 0.56208
 
 [node name="Player" type="KinematicBody"]
 script = ExtResource( 1 )
@@ -14,12 +13,9 @@ script = ExtResource( 1 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0557524, 0.0510656 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.102474, 0 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.272032, 0 )
 shape = SubResource( 1 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.475921, 0.0913839 )
 fov = 90.0
-
-[node name="EnemyStabby" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )

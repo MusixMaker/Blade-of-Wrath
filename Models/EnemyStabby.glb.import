@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Enemy.glb-559a77d6113f0f5d553da482e9a7f7b6.scn"
+path="res://.import/EnemyStabby.glb-7d90fd382df079af61b396a36d0d480f.scn"
 
 [deps]
 
-source_file="res://Models/Enemy.glb"
-dest_files=[ "res://.import/Enemy.glb-559a77d6113f0f5d553da482e9a7f7b6.scn" ]
+source_file="res://Models/EnemyStabby.glb"
+dest_files=[ "res://.import/EnemyStabby.glb-7d90fd382df079af61b396a36d0d480f.scn" ]
 
 [params]
 
