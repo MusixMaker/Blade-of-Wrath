@@ -452,7 +452,7 @@ surfaces/0 = {
 "vertex_count": 38
 }
 
-[sub_resource type="Animation" id=53]
+[sub_resource type="Animation" id=51]
 resource_name = "Die"
 length = 3.33333
 tracks/0/type = "transform"
@@ -575,7 +575,7 @@ tracks/16/imported = true
 tracks/16/enabled = true
 tracks/16/keys = PoolRealArray( 0, 1, 0, 1.62864, 0, -2.98023e-08, 0, 0, 1, 1, 1, 1, 1.2, 1, 0, 1.62864, 0, -2.98023e-08, 0, 0, 1, 1, 1, 1, 1.26667, 1, 0, 1.61635, 0.00298241, 0.00100278, 0, 0, 1, 1, 1, 1, 1.33333, 1, 0, 1.51281, 0.0276938, 0.00966509, 0, 0, 0.999953, 1, 1, 1, 1.4, 1, 0, 1.28658, 0.0792469, 0.0298289, 0, 0, 0.999555, 1, 1, 1, 1.53333, 1, 0, 0.681103, 0.201526, 0.0917102, 0, 0, 0.995786, 1, 1, 1, 1.6, 1, 0, 0.383997, 0.246688, 0.129535, 0, 0, 0.991575, 1, 1, 1, 1.66667, 1, 0, 0.142397, 0.266286, 0.16891, 0, 0, 0.985632, 1, 1, 1, 1.73333, 1, 0, -0.0195198, 0.266286, 0.208008, 0, 0, 0.978127, 1, 1, 1, 1.8, 1, 0, -0.133007, 0.266286, 0.245765, 0, 0, 0.969329, 1, 1, 1, 1.86667, 1, 0, -0.203391, 0.266286, 0.281215, 0, 0, 0.959645, 1, 1, 1, 1.93333, 1, 0, -0.241328, 0.266286, 0.313325, 0, 0, 0.949646, 1, 1, 1, 2, 1, 0, -0.257955, 0.266286, 0.341496, 0, 0, 0.939883, 1, 1, 1, 2.06667, 1, 0, -0.261022, 0.266286, 0.364047, 0, 0, 0.931381, 1, 1, 1, 2.13333, 1, 0, -0.261532, 0.266286, 0.381247, 0, 0, 0.924473, 1, 1, 1, 2.2, 1, 0, -0.264552, 0.266286, 0.39435, 0, 0, 0.918961, 1, 1, 1, 2.26667, 1, 0, -0.274016, 0.266286, 0.406499, 0, 0, 0.913651, 1, 1, 1, 2.33333, 1, 0, -0.29254, 0.266286, 0.420315, 0, 0, 0.907378, 1, 1, 1, 2.4, 1, 0, -0.325695, 0.266286, 0.439375, 0, 0, 0.898304, 1, 1, 1, 2.46667, 1, 0, -0.374877, 0.266286, 0.465645, 0, 0, 0.884971, 1, 1, 1, 2.53333, 1, 0, -0.444822, 0.266286, 0.501933, 0, 0, 0.864907, 1, 1, 1, 2.73333, 1, 0, -0.722716, 0.266286, 0.63463, 0, 0, 0.772816, 1, 1, 1, 2.8, 1, 0, -0.800193, 0.266286, 0.668304, 0, 0, 0.743888, 1, 1, 1, 2.86667, 1, 0, -0.850221, 0.266286, 0.689163, 0, 0, 0.724606, 1, 1, 1, 2.93333, 1, 0, -0.864072, 0.266286, 0.694811, 0, 0, 0.719193, 1, 1, 1, 3.33333, 1, 0, -0.864072, 0.266286, 0.694811, 0, 0, 0.719193, 1, 1, 1 )
 
-[sub_resource type="Animation" id=54]
+[sub_resource type="Animation" id=52]
 resource_name = "Get_Stabbed"
 length = 0.416667
 tracks/0/type = "transform"
@@ -698,7 +698,7 @@ tracks/16/imported = true
 tracks/16/enabled = true
 tracks/16/keys = PoolRealArray( 0, 1, 0, 1.62864, 0, -2.98023e-08, 0, 0, 1, 1, 1, 1, 0.416667, 1, 0, 1.62864, 0, -2.98023e-08, 0, 0, 1, 1, 1, 1 )
 
-[sub_resource type="Animation" id=55]
+[sub_resource type="Animation" id=53]
 resource_name = "Idle"
 length = 0.833333
 tracks/0/type = "transform"
@@ -821,7 +821,7 @@ tracks/16/imported = true
 tracks/16/enabled = true
 tracks/16/keys = PoolRealArray( 0, 1, 0, 1.62864, 0, -2.98023e-08, 0, 0, 1, 1, 1, 1, 0.833333, 1, 0, 1.62864, 0, -2.98023e-08, 0, 0, 1, 1, 1, 1 )
 
-[sub_resource type="Animation" id=57]
+[sub_resource type="Animation" id=54]
 resource_name = "Run"
 length = 0.833333
 tracks/0/type = "transform"
@@ -944,7 +944,7 @@ tracks/16/imported = true
 tracks/16/enabled = true
 tracks/16/keys = PoolRealArray( 0, 1, 0, 1.62864, 0, -2.98023e-08, 0, 0, 1, 1, 1, 1, 0.833333, 1, 0, 1.62864, 0, -2.98023e-08, 0, 0, 1, 1, 1, 1 )
 
-[sub_resource type="Animation" id=58]
+[sub_resource type="Animation" id=55]
 resource_name = "Walk"
 length = 1.66667
 tracks/0/type = "transform"
@@ -1067,12 +1067,16 @@ tracks/16/imported = true
 tracks/16/enabled = true
 tracks/16/keys = PoolRealArray( 0, 1, 0, 1.62864, 0, -2.98023e-08, 0, 0, 1, 1, 1, 1, 1.66667, 1, 0, 1.62864, 0, -2.98023e-08, 0, 0, 1, 1, 1, 1 )
 
-[sub_resource type="CapsuleShape" id=59]
-radius = 0.682104
-height = 4.83083
+[sub_resource type="SphereShape" id=56]
+radius = 20.0
 
 [node name="EnemyStabby" type="Spatial"]
 script = ExtResource( 1 )
+
+[node name="RayCast" type="RayCast" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.66447, 0 )
+enabled = true
+cast_to = Vector3( 0, 0, 10 )
 
 [node name="Armature" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00699532, 1.23912, -0.0888806 )
@@ -1084,13 +1088,13 @@ transform = Transform( 1, 0, 0, 0, 1, 5.96046e-08, 0, -5.96046e-08, 1, 0, 1.6286
 transform = Transform( 1, 0, 0, 0, 0.996189, -0.0872259, 0, 0.0872259, 0.996189, 0, 0.416896, 0 )
 
 [node name="Torso2" type="Spatial" parent="Armature/Waist Bone (Central)/Abdomen (Upper)"]
-transform = Transform( 1, -2.64698e-22, 2.38419e-07, 1.77636e-15, 1, -7.45057e-09, -2.38419e-07, 7.45057e-09, 1, 3.55271e-15, 0.419716, 1.49012e-08 )
+transform = Transform( 1, -1.79995e-21, 2.38418e-07, 1.77635e-15, 1, -7.45058e-09, -2.38418e-07, 7.45058e-09, 1, 3.55271e-15, 0.419716, 1.49012e-08 )
 
 [node name="Neck" type="Spatial" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2"]
-transform = Transform( 1, 8.88178e-16, 1.42109e-14, -8.88178e-16, 1, 3.72529e-09, -1.42109e-14, -3.72529e-09, 1, 1.06581e-14, 1.37641, -1.49012e-08 )
+transform = Transform( 1, 8.88178e-16, 1.42109e-14, -8.88178e-16, 1, 3.7253e-09, -1.42109e-14, -3.7253e-09, 1, 1.06581e-14, 1.37641, -1.49012e-08 )
 
 [node name="Head" type="Spatial" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2/Neck"]
-transform = Transform( 1, -5.1566e-08, 5.64323e-09, 5.1566e-08, 0.976331, -0.216284, 5.64322e-09, 0.216284, 0.976331, -2.7749e-14, 0.218767, 1.16388e-07 )
+transform = Transform( 1, -5.15659e-08, 5.6432e-09, 5.15659e-08, 0.976331, -0.216283, 5.64319e-09, 0.216283, 0.976331, -2.7749e-14, 0.218767, 1.16388e-07 )
 
 [node name="Cube001" type="MeshInstance" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2/Neck/Head"]
 transform = Transform( 0.327693, 9.38625e-09, -7.75622e-08, -3.78365e-15, 0.325319, 0.0393688, 7.81281e-08, -0.0393688, 0.325319, -0.00699533, 0.366084, 0.0184792 )
@@ -1103,13 +1107,13 @@ mesh = SubResource( 4 )
 material/0 = null
 
 [node name="Left Bicep2" type="Spatial" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2"]
-transform = Transform( -0.947302, 0.320348, 7.59755e-07, -0.320348, -0.947298, 0.00214543, 0.000688007, 0.00203213, 0.999998, 0.610618, 1.1856, 0.0599801 )
+transform = Transform( -0.9473, 0.320348, 7.59173e-07, -0.320348, -0.947298, 0.00214544, 0.000688007, 0.00203213, 0.999998, 0.610618, 1.1856, 0.0599801 )
 
 [node name="Left Forearm2" type="Spatial" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2/Left Bicep2"]
-transform = Transform( 0.949212, 0.312111, -0.0397903, -0.314606, 0.939723, -0.133951, -0.00441575, 0.139666, 0.990189, -1.8816e-07, 1.10002, -3.54303e-08 )
+transform = Transform( 0.949212, 0.312111, -0.0397903, -0.314607, 0.939723, -0.133951, -0.00441578, 0.139666, 0.990189, -1.8816e-07, 1.10002, -3.54303e-08 )
 
 [node name="Left Hand2" type="Spatial" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2/Left Bicep2/Left Forearm2"]
-transform = Transform( 0.999972, 0.00460139, -0.0059125, -0.0053762, 0.990343, -0.138537, 0.00521793, 0.138565, 0.99034, -1.02729e-07, 0.886494, 1.40745e-08 )
+transform = Transform( 0.999972, 0.00460138, -0.00591249, -0.0053762, 0.990343, -0.138538, 0.00521793, 0.138565, 0.99034, -1.02729e-07, 0.886494, 1.40745e-08 )
 
 [node name="Left Hand" type="MeshInstance" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2/Left Bicep2/Left Forearm2/Left Hand2"]
 transform = Transform( 0.0528141, -1.09351e-08, 1.29574e-07, -4.73043e-09, 0.182808, 0.00964268, -7.45779e-08, -0.0193393, 0.0911491, 0.0238562, 0.248079, -0.0156466 )
@@ -1142,13 +1146,13 @@ mesh = SubResource( 16 )
 material/0 = null
 
 [node name="Right Bicep2" type="Spatial" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2"]
-transform = Transform( -0.936196, -0.35148, 1.00303e-06, 0.351076, -0.93512, 0.0479185, -0.0168415, 0.0448615, 0.998851, -0.577351, 1.1856, 0.0599799 )
+transform = Transform( -0.936195, -0.35148, 1.03097e-06, 0.351077, -0.93512, 0.0479186, -0.0168415, 0.0448615, 0.998851, -0.577351, 1.1856, 0.0599799 )
 
 [node name="Right Forearm2" type="Spatial" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2/Right Bicep2"]
-transform = Transform( 0.941317, -0.337207, 0.014627, 0.337341, 0.94135, -0.00788516, -0.0111102, 0.0123567, 0.999862, -3.5896e-08, 1.12173, -3.22018e-09 )
+transform = Transform( 0.941317, -0.337206, 0.014627, 0.337341, 0.94135, -0.00788516, -0.0111102, 0.0123567, 0.999862, -3.5896e-08, 1.12173, -3.22018e-09 )
 
 [node name="Right Hand2" type="Spatial" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2/Right Bicep2/Right Forearm2"]
-transform = Transform( 0.999825, -0.0185367, -0.00242993, 0.0180273, 0.990358, -0.13735, 0.00495252, 0.137283, 0.990519, 2.2807e-08, 0.878599, -6.22406e-09 )
+transform = Transform( 0.999825, -0.0185367, -0.00242993, 0.0180273, 0.990358, -0.13735, 0.00495252, 0.137282, 0.99052, 2.2807e-08, 0.878599, -6.22406e-09 )
 
 [node name="Right Hand" type="MeshInstance" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2/Right Bicep2/Right Forearm2/Right Hand2"]
 transform = Transform( -0.052814, -2.22289e-05, -1.28845e-06, 6.27281e-06, -0.182808, 0.00964269, -1.41016e-06, 0.0193393, 0.0911492, 0.0312197, 0.236988, -0.0130349 )
@@ -1191,13 +1195,13 @@ mesh = SubResource( 32 )
 material/0 = null
 
 [node name="Left Quad (Lower Left)" type="Spatial" parent="Armature/Waist Bone (Central)"]
-transform = Transform( -0.992673, 0.115899, 0.034192, -0.118329, -0.989695, -0.0806312, 0.0244946, -0.0840862, 0.996158, 0.277991, -0.275436, -0.00243448 )
+transform = Transform( -0.992672, 0.115899, 0.034192, -0.118329, -0.989696, -0.0806311, 0.0244946, -0.0840862, 0.996157, 0.277991, -0.275436, -0.00243448 )
 
 [node name="Left Shin2" type="Spatial" parent="Armature/Waist Bone (Central)/Left Quad (Lower Left)"]
-transform = Transform( 0.993148, 0.115992, -0.0142693, -0.116618, 0.991578, -0.0563387, 0.00761435, 0.0576167, 0.99831, -2.18781e-08, 1.08976, 1.10996e-09 )
+transform = Transform( 0.993148, 0.115992, -0.0142693, -0.116618, 0.991578, -0.0563386, 0.00761435, 0.0576166, 0.99831, -2.18781e-08, 1.08976, 1.10996e-09 )
 
 [node name="Left Foot2" type="Spatial" parent="Armature/Waist Bone (Central)/Left Quad (Lower Left)/Left Shin2"]
-transform = Transform( 0.999708, 0.0169124, -0.017282, -0.0229658, 0.440415, -0.8975, -0.00756767, 0.897635, 0.440675, -1.9718e-09, 1.24795, 2.33118e-08 )
+transform = Transform( 0.999708, 0.0169124, -0.017282, -0.0229658, 0.440416, -0.8975, -0.00756765, 0.897634, 0.440676, -1.9718e-09, 1.24795, 2.33118e-08 )
 
 [node name="Left Foot" type="MeshInstance" parent="Armature/Waist Bone (Central)/Left Quad (Lower Left)/Left Shin2/Left Foot2"]
 transform = Transform( -0.12049, 0.00240983, -4.42839e-05, -0.00110419, -0.0532223, 0.10812, 0.00214243, 0.108099, 0.0532337, -0.00280172, 0.0727263, -0.162104 )
@@ -1220,13 +1224,13 @@ mesh = SubResource( 40 )
 material/0 = null
 
 [node name="Right Quad (Lower Right)" type="Spatial" parent="Armature/Waist Bone (Central)"]
-transform = Transform( -0.992658, -0.12045, -0.00970443, 0.120659, -0.992374, -0.0252058, -0.00659431, -0.0261922, 0.999629, -0.297674, -0.275436, -0.00243449 )
+transform = Transform( -0.992658, -0.120451, -0.00970443, 0.120659, -0.992374, -0.0252058, -0.00659432, -0.0261922, 0.999629, -0.297674, -0.275436, -0.00243449 )
 
 [node name="Right Shin2" type="Spatial" parent="Armature/Waist Bone (Central)/Right Quad (Lower Right)"]
-transform = Transform( 0.993184, -0.115416, -0.01624, 0.116114, 0.991875, 0.0519809, 0.0101086, -0.0535123, 0.998516, -3.37023e-08, 1.08976, 2.22894e-09 )
+transform = Transform( 0.993184, -0.115416, -0.01624, 0.116114, 0.991875, 0.0519808, 0.0101086, -0.0535123, 0.998516, -3.37023e-08, 1.08976, 2.22894e-09 )
 
 [node name="Right Foot2" type="Spatial" parent="Armature/Waist Bone (Central)/Right Quad (Lower Right)/Right Shin2"]
-transform = Transform( 0.999847, -0.010874, -0.0137365, -0.00781339, 0.425004, -0.905158, 0.0156807, 0.905126, 0.424854, 5.75891e-09, 1.24795, 2.24894e-08 )
+transform = Transform( 0.999847, -0.010874, -0.0137365, -0.0078134, 0.425003, -0.905158, 0.0156807, 0.905127, 0.424853, 5.75891e-09, 1.24795, 2.24894e-08 )
 
 [node name="Right Foot" type="MeshInstance" parent="Armature/Waist Bone (Central)/Right Quad (Lower Right)/Right Shin2/Right Foot2"]
 transform = Transform( -0.120492, 0.00139753, 0.00196408, 0.00110567, -0.0552142, 0.107117, 0.00214203, 0.107113, 0.0551906, -0.00479656, 0.0924512, -0.152079 )
@@ -1254,19 +1258,21 @@ mesh = SubResource( 50 )
 material/0 = null
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Die = SubResource( 53 )
-anims/Get_Stabbed = SubResource( 54 )
-anims/Idle = SubResource( 55 )
-anims/Run = SubResource( 57 )
-anims/Walk = SubResource( 58 )
+anims/Die = SubResource( 51 )
+anims/Get_Stabbed = SubResource( 52 )
+anims/Idle = SubResource( 53 )
+anims/Run = SubResource( 54 )
+anims/Walk = SubResource( 55 )
 
-[node name="Area" type="Area" parent="."]
+[node name="SightRange" type="Area" parent="."]
 
-[node name="CollisionShape" type="CollisionShape" parent="Area"]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 3, 0 )
-shape = SubResource( 59 )
+[node name="CollisionShape" type="CollisionShape" parent="SightRange"]
+shape = SubResource( 56 )
 
-[node name="RayCast" type="RayCast" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.66447, 0 )
-enabled = true
-cast_to = Vector3( 0, 0, 10 )
+[node name="Eyes" type="Spatial" parent="."]
+
+[node name="StabTimer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="SightRange" to="." method="_on_Area_body_entered"]
+[connection signal="body_exited" from="SightRange" to="." method="_on_SightRange_body_exited"]
+[connection signal="timeout" from="StabTimer" to="." method="_on_StabTimer_timeout"]
