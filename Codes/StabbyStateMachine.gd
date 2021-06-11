@@ -5,6 +5,7 @@ enum {
 	ATTACK,
 	STABBED,
 	RUN,
+	WALK,
 	DEAD
 } 
 
@@ -17,6 +18,7 @@ const TURN_SPEED = 2
 onready var raycast = $RayCast
 onready var ap = $AnimationPlayer
 onready var eyes = $Eyes
+onready var attacktimer = $StabTimer
 
 func _ready():
 	pass
@@ -25,9 +27,11 @@ func _on_Area_body_entered(body):
 	if body.is_in_group("Player"):
 		state = RUN
 		target = body
+		attacktimer.start()
 
 func _on_SightRange_body_exited(body):
 	state = IDLE
+	attacktimer.stop()
 
 func _process(delta):
 	match state:
@@ -38,9 +42,12 @@ func _process(delta):
 			eyes.look_at(target.global_transform.origin, Vector3.UP)
 			rotate_y(deg2rad(-eyes.rotation.y * TURN_SPEED))
 		ATTACK:
-			ap.play("Att")
+			ap.play("Attack")
 
 
 
 func _on_StabTimer_timeout():
-	state = ATTACK
+	if raycast.is_colliding():
+		var hit = raycast.get_collider()
+		if hit.is_in_group("Player"):
+			print("Hit")

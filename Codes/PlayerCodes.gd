@@ -70,7 +70,7 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) 
 
 func _physics_process(delta):
-	print(is_on_floor())
+	#print(is_on_floor())#
 	#set X and Y velocities to 0
 	vel.x = 0
 	vel.z = 0
