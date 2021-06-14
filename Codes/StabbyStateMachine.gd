@@ -23,7 +23,7 @@ onready var attacktimer = $StabTimer
 func _ready():
 	pass
 
-func _on_Area_body_entered(body):
+func _on_SightRange_body_entered(body):
 	if body.is_in_group("Player"):
 		state = RUN
 		target = body
@@ -51,3 +51,5 @@ func _on_StabTimer_timeout():
 		var hit = raycast.get_collider()
 		if hit.is_in_group("Player"):
 			print("Hit")
+			state = ATTACK
+
