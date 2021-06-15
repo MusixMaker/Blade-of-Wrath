@@ -17,6 +17,10 @@ _global_script_class_icons={
 config/name="Blade of Wrath"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/fullscreen=true
+
 [input]
 
 ui_up={

@@ -10,7 +10,7 @@ enum {
 } 
 
 var state = IDLE
-
+var space_state
 var target
 
 const TURN_SPEED = 2
@@ -21,7 +21,7 @@ onready var eyes = $Eyes
 onready var attacktimer = $StabTimer
 
 func _ready():
-	pass
+	space_state = get_world().direct_space_state
 
 func _on_SightRange_body_entered(body):
 	if body.is_in_group("Player"):
@@ -38,11 +38,16 @@ func _process(delta):
 		IDLE:
 			ap.play("Idle")
 		RUN:
-			ap.play("Run")
-			eyes.look_at(target.global_transform.origin, Vector3.UP)
-			rotate_y(deg2rad(-eyes.rotation.y * TURN_SPEED))
+			var result = space_state.intersect_ray(global_transform.origin, target.global_transform.origin)
+			if result.collider.is_in_group("Player"):
+				ap.play("Run")
+				eyes.look_at(target.global_transform.origin, Vector3.UP)
+				rotate_y(deg2rad(-eyes.rotation.y * TURN_SPEED))
+			else:
+				state = IDLE
 		ATTACK:
-			ap.play("Attack")
+			eyes.look_at(target.global_transform.origin, Vector3.UP)
+			ap.play("Stabby")
 
 
 
@@ -52,4 +57,5 @@ func _on_StabTimer_timeout():
 		if hit.is_in_group("Player"):
 			print("Hit")
 			state = ATTACK
+			attacktimer.start()
 
