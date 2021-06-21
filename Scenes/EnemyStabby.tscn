@@ -79,9 +79,11 @@ cast_to = Vector3( 0, 0, 6.5 )
 
 [node name="Cube2" parent="." index="5"]
 transform = Transform( 0.119594, -3.51323e-09, -3.15458e-08, 2.85135e-08, 0.0147355, 0.132313, -2.5493e-15, -0.234031, 0.00833095, 0.00563605, 0.0894466, 0.0780967 )
+visible = false
 mesh = null
 
 [node name="Cube0012" parent="." index="6"]
+visible = false
 mesh = null
 
 [connection signal="body_entered" from="SightRange" to="." method="_on_SightRange_body_entered"]
