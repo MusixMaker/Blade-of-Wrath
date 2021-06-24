@@ -1,54 +1,23 @@
 extends KinematicBody
 
-"""var gravity = -9.8
-var velocity = Vector3()
-var camera
+enum{
+	IDLE,
+	WALK,
+	RUN,
+	ATTACK,
+	DAMAGE,
+	DIE
+}
 
-const SPEED = 6
-const ACCELERATION = 3
-const DE_ACCELERATION = 5
-
-func _ready():
-	camera = get_node("Camera").get_global_transform()
-
-func _physics_process(delta):
-	var dir = Vector3()
-	
-	if(Input.is_action_pressed("move_forward")):
-		dir += -camera.basis[2]
-	if(Input.is_action_pressed("move_back")):
-		dir += camera.basis[2]
-	if(Input.is_action_pressed("move_left")):
-		dir += -camera.basis[0]
-	if(Input.is_action_pressed("move_right")):
-		dir += camera.basis[0]
-		
-	dir.y = 0
-	dir = dir.normalized()
-	
-	velocity.y += delta * gravity
-	
-	var hv = velocity
-	hv.y = 0
-	
-	var new_pos = dir * SPEED
-	var accel = DE_ACCELERATION
-	
-	if (dir.dot(hv) > 0):
-		accel = ACCELERATION
-		
-	hv = hv.linear_interpolate(new_pos, accel * delta)
-	
-	velocity.x = hv.x
-	velocity.z = hv.z
-	
-	velocity = move_and_slide(velocity, Vector3(0,1,0))"""
 #Stats
 var cur_hp : int = 10
 var max_hp : int = 10
 var score : int = 0
+var state = IDLE
 
 #Physics
+var walking = false
+var sprint = false
 var movementSpeed : float = 10
 var jumpForce : float = 5
 var gravity : float = 15
@@ -64,6 +33,7 @@ var mouseDelta = Vector2()
 
 #components
 onready var camera : Camera = get_node("Camera")
+onready var ap = $Player/AnimationPlayer
 
 func _ready():
 	#hide and lock mouse cursor
@@ -81,15 +51,36 @@ func _physics_process(delta):
 	#Movement Inputs
 	if Input.is_action_pressed("move_forward"):
 		input.y += 1
+		walking = true
+		
 	if Input.is_action_pressed("move_back"):
 		input.y -= 1
+		walking = true
+		
 	if Input.is_action_pressed("move_left"):
 		input.x += 1
+		walking = true
+		
 	if Input.is_action_pressed("move_right"):
 		input.x -= 1
-	if Input.is_action_pressed("sprint"):
+		walking = true
+		
+		
+		
+	if Input.is_action_pressed("sprint") and walking == true:
+		walking = false
+		sprint = true
 		movementSpeed = 10
+		state = RUN
 	
+		
+	#changes statses for movement
+	if walking == true:
+		state = WALK
+		
+	if walking == false and sprint == false:
+		state = IDLE
+
 	input = input.normalized()
 	
 	#Get directions
@@ -121,6 +112,20 @@ func _process(delta):
 	rotation_degrees.y -= mouseDelta.x * loookSensitivity * delta
 	#reset the mouse delta vector
 	mouseDelta = Vector2()
+	
+	match state:
+		IDLE:
+			ap.play("Idle")
+		WALK:
+			ap.play("Walk")
+		RUN:
+			ap.play("Run")
+		ATTACK:
+			ap.play("Stabby")
+		DAMAGE:
+			ap.play("Get_Stabbed")
+		DIE:
+			ap.play("Die")
 
 func _input(event):
 	if event is InputEventMouseMotion:
