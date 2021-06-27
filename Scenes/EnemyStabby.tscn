@@ -6,7 +6,9 @@
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 2.90913, 1, 7.28757 )
 
-[node name="EnemyStabby" instance=ExtResource( 2 )]
+[node name="EnemyStabby" groups=[
+"Enemy",
+] instance=ExtResource( 2 )]
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
 script = ExtResource( 1 )
 

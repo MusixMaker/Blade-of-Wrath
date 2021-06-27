@@ -14,6 +14,8 @@ var cur_hp : int = 10
 var max_hp : int = 10
 var score : int = 0
 var state = IDLE
+var melee_damage = 50
+onready var hitbox = $Head/Camera/Hitbox
 
 #Physics
 var walking = false
@@ -35,6 +37,14 @@ var mouseDelta = Vector2()
 onready var camera : Camera = get_node("Camera")
 onready var ap = $Player/AnimationPlayer
 
+func melee():
+	ap.play("Stabby")
+	if ap.current_animation == "Stabby":
+		for body in hitbox:
+			if body.is_in_group("Enemy"):
+				body.health -= melee_damage
+	
+
 func _ready():
 	#hide and lock mouse cursor
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) 
@@ -53,25 +63,38 @@ func _physics_process(delta):
 		input.y += 1
 		walking = true
 		
+	if Input.is_action_just_released("move_forward"):
+		walking = false
+		
 	if Input.is_action_pressed("move_back"):
 		input.y -= 1
 		walking = true
+		
+	if Input.is_action_just_released("move_back"):
+		walking = false
 		
 	if Input.is_action_pressed("move_left"):
 		input.x += 1
 		walking = true
 		
+	if Input.is_action_just_released("move_left"):
+		walking = false
+		
 	if Input.is_action_pressed("move_right"):
 		input.x -= 1
 		walking = true
 		
-		
+	if Input.is_action_just_released("move_right"):
+		walking = false
 		
 	if Input.is_action_pressed("sprint") and walking == true:
 		walking = false
 		sprint = true
 		movementSpeed = 10
 		state = RUN
+		
+	if Input.is_action_just_released("sprint"):
+		sprint = false
 	
 		
 	#changes statses for movement
@@ -80,6 +103,9 @@ func _physics_process(delta):
 		
 	if walking == false and sprint == false:
 		state = IDLE
+		
+	if Input.is_action_pressed("attack"):
+		melee()
 
 	input = input.normalized()
 	
