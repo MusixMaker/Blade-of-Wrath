@@ -13,55 +13,49 @@ transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
 script = ExtResource( 1 )
 
 [node name="Waist Bone (Central)" parent="Armature" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 5.96046e-08, 0, -5.96046e-08, 1, 0, 1.62864, 0 )
-
-[node name="Abdomen (Upper)" parent="Armature/Waist Bone (Central)" index="0"]
-transform = Transform( 1, 0, 0, 0, 0.942171, -0.335134, 0, 0.335134, 0.942171, 0, 0.416896, 0 )
+transform = Transform( 0.999858, 0.000378043, 0.0168427, 0.000377983, 0.998993, -0.0448617, -0.0168427, 0.0448617, 0.998851, -0.000932147, 1.70305, 0.000232364 )
 
 [node name="Torso2" parent="Armature/Waist Bone (Central)/Abdomen (Upper)" index="0"]
-transform = Transform( 1, 3.55271e-15, 2.38419e-07, -1.48231e-21, 1, -1.49012e-08, -2.38419e-07, 1.49012e-08, 1, -1.42109e-14, 0.419716, 3.38813e-21 )
-
-[node name="Neck" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2" index="0"]
-transform = Transform( 1, 3.55271e-15, 1.42109e-14, -3.55271e-15, 1, 2.52436e-29, -1.42109e-14, -7.57306e-29, 1, 1.42109e-14, 1.37641, -4.03897e-28 )
+transform = Transform( 0.999858, 0.000378053, 0.0168429, 0.000377984, 0.998993, -0.0448618, -0.0168429, 0.0448618, 0.998851, 6.98492e-10, 0.419716, -1.66533e-16 )
 
 [node name="Head" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2/Neck" index="0"]
-transform = Transform( 1, -5.1566e-08, 5.64324e-09, 5.1566e-08, 0.976331, -0.216284, 5.64321e-09, 0.216284, 0.976331, 4.0716e-14, 0.218766, -5.1566e-08 )
+transform = Transform( 0.999858, 0.00037799, 0.0168427, 0.00401188, 0.965645, -0.259835, -0.0163623, 0.259866, 0.965506, -7.45057e-09, 0.218766, -5.1566e-08 )
 
 [node name="Left Bicep2" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2" index="1"]
-transform = Transform( -0.947302, 0.320348, 8.00937e-07, -0.317678, -0.939402, -0.128863, -0.0412803, -0.122072, 0.991662, 0.610618, 1.18825, 0.0597479 )
+transform = Transform( -0.947302, 0.257326, -0.190805, -0.320348, -0.759656, 0.565951, 0.000687638, 0.597249, 0.802055, 0.610618, 1.1856, 0.05998 )
 
 [node name="Left Forearm2" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2/Left Bicep2" index="0"]
-transform = Transform( 0.949371, 0.304191, -0.0784981, -0.314135, 0.916302, -0.248414, -0.00363712, 0.260496, 0.965468, -3.59418e-08, 1.10002, 2.3972e-08 )
+transform = Transform( 0.956471, 0.285546, -0.0602244, -0.288032, 0.956886, -0.037504, 0.0469188, 0.053218, 0.99748, 3.65283e-08, 1.10002, 1.58836e-08 )
 
 [node name="Left Hand2" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2/Left Bicep2/Left Forearm2" index="0"]
-transform = Transform( 0.999972, 0.00277337, -0.00695994, -0.00537646, 0.912601, -0.408816, 0.00521785, 0.408842, 0.91259, -3.76398e-08, 0.886493, -5.68641e-09 )
+transform = Transform( 0.999927, 0.00502819, 0.010969, -0.00355527, 0.991457, -0.130388, -0.0115309, 0.13034, 0.991402, -4.40034e-08, 0.886493, -9.43814e-10 )
 
 [node name="Right Bicep2" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2" index="2"]
-transform = Transform( -0.936196, -0.35148, 1.00583e-06, 0.336407, -0.896047, 0.289706, -0.101825, 0.271222, 0.957116, -0.577351, 1.18825, 0.0597473 )
+transform = Transform( -0.510109, -0.736224, -0.444706, 0.153933, -0.586831, 0.794943, -0.846223, 0.337053, 0.412677, -0.577351, 1.1856, 0.0599799 )
 
 [node name="Right Forearm2" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2/Right Bicep2" index="0"]
-transform = Transform( 0.939833, -0.255107, 0.227229, 0.341292, 0.730792, -0.591153, -0.0152496, 0.633137, 0.773889, -3.78797e-08, 1.12173, -2.0992e-08 )
+transform = Transform( 0.605157, -0.262196, 0.75169, 0.205986, 0.963624, 0.170289, -0.768996, 0.0517861, 0.637153, 1.2621e-07, 1.12173, 2.39997e-07 )
 
 [node name="Right Hand2" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2/Right Bicep2/Right Forearm2" index="0"]
-transform = Transform( 0.999825, -0.0184965, 0.00271633, 0.018027, 0.915384, -0.402179, 0.00495242, 0.402157, 0.915557, -9.61e-08, 0.878599, 2.2573e-07 )
+transform = Transform( 0.849888, -0.433921, -0.299003, 0.45468, 0.890655, -0.000155814, 0.266376, -0.135818, 0.954252, 7.93808e-08, 0.878599, -2.25915e-07 )
 
 [node name="Left Quad (Lower Left)" parent="Armature/Waist Bone (Central)" index="1"]
-transform = Transform( -0.992674, 0.120448, -0.00969863, -0.0985261, -0.760303, 0.642054, 0.0699603, 0.638304, 0.766599, 0.277991, -0.275436, -0.00243448 )
+transform = Transform( -0.992673, 0.115899, 0.034192, -0.118329, -0.989695, -0.0806312, 0.0244946, -0.0840862, 0.996158, 0.277991, -0.275436, -0.00243446 )
 
 [node name="Left Shin2" parent="Armature/Waist Bone (Central)/Left Quad (Lower Left)" index="0"]
-transform = Transform( 0.993047, 0.0797519, 0.0865916, -0.117546, 0.63156, 0.766365, 0.00643134, -0.771215, 0.636543, -5.49296e-08, 1.08976, 2.68647e-09 )
+transform = Transform( 0.993148, 0.115992, -0.0142693, -0.116618, 0.991578, -0.0563387, 0.00761435, 0.0576167, 0.99831, -2.52784e-08, 1.08976, 1.94512e-08 )
 
 [node name="Left Foot2" parent="Armature/Waist Bone (Central)/Left Quad (Lower Left)/Left Shin2" index="0"]
-transform = Transform( 0.999703, 0.0109538, -0.0217803, -0.0242902, 0.371057, -0.928292, -0.00208662, 0.928545, 0.371212, 2.51399e-08, 1.24795, 6.96637e-09 )
+transform = Transform( 0.999708, 0.0169124, -0.017282, -0.0229658, 0.440415, -0.8975, -0.00756767, 0.897635, 0.440675, -1.01304e-09, 1.24795, -2.88987e-08 )
 
 [node name="Right Quad (Lower Right)" parent="Armature/Waist Bone (Central)" index="2"]
-transform = Transform( -0.992658, -0.12045, -0.00970267, 0.120792, -0.986863, -0.10728, 0.00334669, -0.107667, 0.994175, -0.297674, -0.275436, -0.00243449 )
+transform = Transform( -0.992658, -0.12045, -0.00970443, 0.120659, -0.992374, -0.0252058, -0.00659431, -0.0261922, 0.999629, -0.297673, -0.275436, -0.00243449 )
 
 [node name="Right Shin2" parent="Armature/Waist Bone (Central)/Right Quad (Lower Right)" index="0"]
-transform = Transform( 0.99311, -0.100191, -0.0607804, 0.116595, 0.896792, 0.426813, 0.0117447, -0.430959, 0.902295, -5.94962e-08, 1.08976, -7.13182e-09 )
+transform = Transform( 0.993184, -0.115416, -0.01624, 0.116114, 0.991875, 0.0519809, 0.0101086, -0.0535123, 0.998516, -8.932e-08, 1.08976, -2.17277e-09 )
 
 [node name="Right Foot2" parent="Armature/Waist Bone (Central)/Right Quad (Lower Right)/Right Shin2" index="0"]
-transform = Transform( 0.999846, -0.0109082, -0.013751, -0.00766993, 0.43315, -0.901289, 0.0157876, 0.901256, 0.432999, -7.21326e-08, 1.24795, 1.80072e-08 )
+transform = Transform( 0.999846, -0.010874, -0.0137365, -0.00781339, 0.425004, -0.905158, 0.0156807, 0.905126, 0.424854, 6.73022e-09, 1.24795, -5.85318e-08 )
 
 [node name="SightRange" type="Area" parent="." index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.47585, 0 )

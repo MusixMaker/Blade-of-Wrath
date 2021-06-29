@@ -25,15 +25,13 @@ shape = SubResource( 1 )
 [node name="Player" parent="." instance=ExtResource( 2 )]
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -0.233156, 0 )
 
-[node name="Head" type="Spatial" parent="."]
-
-[node name="Hitbox" type="Area" parent="Head"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33227e-15, 0.809677, 0.102236 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Head/Hitbox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.569447 )
-shape = SubResource( 2 )
-
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.834072, 0.167925 )
 fov = 90.0
+
+[node name="Hitbox" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33227e-15, 0.809677, 0.102236 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Hitbox"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.569447 )
+shape = SubResource( 2 )

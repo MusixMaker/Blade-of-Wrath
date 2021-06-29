@@ -15,7 +15,6 @@ var max_hp : int = 10
 var score : int = 0
 var state = IDLE
 var melee_damage = 50
-onready var hitbox = $Head/Camera/Hitbox
 
 #Physics
 var walking = false
@@ -36,11 +35,12 @@ var mouseDelta = Vector2()
 #components
 onready var camera : Camera = get_node("Camera")
 onready var ap = $Player/AnimationPlayer
+onready var hitbox = $Hitbox
 
 func melee():
 	ap.play("Stabby")
 	if ap.current_animation == "Stabby":
-		for body in hitbox:
+		for body in hitbox.get_overlapping_bodies():
 			if body.is_in_group("Enemy"):
 				body.health -= melee_damage
 	
