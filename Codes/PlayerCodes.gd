@@ -38,11 +38,13 @@ onready var ap = $Player/AnimationPlayer
 onready var hitbox = $Hitbox
 
 func melee():
-	ap.play("Stabby")
+	#ap.play("Stabby")
 	if ap.current_animation == "Stabby":
 		for body in hitbox.get_overlapping_bodies():
 			if body.is_in_group("Enemy"):
 				body.health -= melee_damage
+	yield(ap,"animation_finished")
+	state = IDLE
 	
 
 func _ready():
@@ -87,7 +89,7 @@ func _physics_process(delta):
 	if Input.is_action_just_released("move_right"):
 		walking = false
 		
-	if Input.is_action_pressed("sprint") and walking == true:
+	if Input.is_action_pressed("sprint") and walking == true and state != ATTACK:
 		walking = false
 		sprint = true
 		movementSpeed = 10
@@ -98,13 +100,14 @@ func _physics_process(delta):
 	
 		
 	#changes statses for movement
-	if walking == true:
+	if walking == true and state != ATTACK:
 		state = WALK
 		
-	if walking == false and sprint == false:
+	if walking == false and sprint == false and state != ATTACK:
 		state = IDLE
 		
 	if Input.is_action_pressed("attack"):
+		state = ATTACK
 		melee()
 
 	input = input.normalized()
