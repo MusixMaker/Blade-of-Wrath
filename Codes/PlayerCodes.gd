@@ -4,6 +4,7 @@ enum{
 	IDLE,
 	WALK,
 	RUN,
+	JUMP,
 	ATTACK,
 	DAMAGE,
 	DIE
@@ -34,7 +35,7 @@ var mouseDelta = Vector2()
 
 #components
 onready var camera : Camera = get_node("Camera")
-onready var ap = $Player/AnimationPlayer
+onready var ap = $PlayerTryout/AnimationPlayer
 onready var hitbox = $Hitbox
 
 func melee():
@@ -131,6 +132,9 @@ func _physics_process(delta):
 	#jumping
 	if Input.is_action_pressed("jump") and is_on_floor():
 		vel.y = jumpForce
+		state = JUMP
+		yield(ap,"animation_finished")
+		state = IDLE
 
 func _process(delta):
 	#rotate the camera along the x axis
@@ -149,6 +153,8 @@ func _process(delta):
 			ap.play("Walk")
 		RUN:
 			ap.play("Run")
+		JUMP:
+			ap.play("Jump")
 		ATTACK:
 			ap.play("Stabby")
 		DAMAGE:

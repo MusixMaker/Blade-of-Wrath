@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Codes/PlayerCodes.gd" type="Script" id=1]
-[ext_resource path="res://Models/Player.glb" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/PlayerTryout.tscn" type="PackedScene" id=2]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.5
@@ -22,9 +22,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.232122, 0.0510656 )
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.272032, 0 )
 shape = SubResource( 1 )
 
-[node name="Player" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -0.233156, 0 )
-
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.834072, 0.167925 )
 fov = 90.0
@@ -35,3 +32,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33227e-15, 0.809677, 0.10223
 [node name="CollisionShape" type="CollisionShape" parent="Hitbox"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.569447 )
 shape = SubResource( 2 )
+
+[node name="PlayerTryout" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -0.266283, 0 )
