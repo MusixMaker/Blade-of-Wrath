@@ -3,7 +3,7 @@
 [ext_resource path="res://Models/Sci Fi Assests/wall_large.glb" type="PackedScene" id=1]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 2.12344, 1.20264, 0.230474 )
+extents = Vector3( 2.12344, 1.74636, 0.230474 )
 
 [sub_resource type="BoxShape" id=2]
 extents = Vector3( 2.04602, 0.001, 0.43287 )
@@ -14,15 +14,16 @@ extents = Vector3( 2.01775, 0.437085, 0.354191 )
 [node name="StaticBody" type="StaticBody"]
 
 [node name="CollisionShapeWall" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.13162, 0.0551097 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7402, 0.0551097 )
 shape = SubResource( 1 )
 
 [node name="wall_large" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShapeFloor" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0127671, 0.0771794, -0.592345 )
 shape = SubResource( 2 )
 
 [node name="CollisionShapeTop" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.57038, 0.644426 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.57849, 0.644426 )
 shape = SubResource( 3 )

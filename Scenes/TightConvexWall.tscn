@@ -3,7 +3,7 @@
 [ext_resource path="res://Models/Sci Fi Assests/convex_wall_tight.glb" type="PackedScene" id=1]
 
 [sub_resource type="CapsuleShape" id=1]
-height = 2.0
+height = 3.02603
 
 [sub_resource type="CylinderShape" id=2]
 radius = 1.46581
@@ -12,10 +12,11 @@ height = 0.002
 [node name="TightConvexWall" type="StaticBody"]
 
 [node name="CollisionShapeBody" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.82026, 1, 0.838631 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.982963, 1.56459, 0.97687 )
 shape = SubResource( 1 )
 
 [node name="convex_wall_tight" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShapeFloor" type="CollisionShape" parent="."]
 transform = Transform( 1.06066, 0, -1.06066, 0, 1, 0, 1.06066, 0, 1.06066, 1.21701, 0.033264, 1.19984 )

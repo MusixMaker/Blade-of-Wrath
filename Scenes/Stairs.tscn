@@ -3,7 +3,7 @@
 [ext_resource path="res://Models/Sci Fi Assests/stair.glb" type="PackedScene" id=1]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 1.69421, 0.321998, 3.5564 )
+extents = Vector3( 1.69421, 0.321998, 3.20931 )
 
 [sub_resource type="BoxShape" id=2]
 extents = Vector3( 0.0969625, 1, 3.17907 )
@@ -17,15 +17,15 @@ extents = Vector3( 1.79606, 1, 0.530796 )
 [node name="Stairs" type="StaticBody"]
 
 [node name="Upwards" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.936335, 0.351107, 0, -0.351107, 0.936335, 0, 0.425939, -1.24252 )
+transform = Transform( 1, 0, 0, 0, 0.872939, 0.48783, 0, -0.48783, 0.872939, 0, 1.06189, -0.829769 )
 shape = SubResource( 1 )
 
 [node name="Right Rail" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, -1.883, 0.933586, 0 )
+transform = Transform( 1, 0, 0, 0, 0.870081, 0.492909, 0, -0.492909, 0.870081, -1.76935, 1.15982, -0.0446102 )
 shape = SubResource( 2 )
 
-[node name="Left Rail" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 1.88683, 0.933586, 0 )
+[node name="Right Rail2" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.870081, 0.492909, 0, -0.492909, 0.870081, 1.78559, 1.15982, -0.0446102 )
 shape = SubResource( 2 )
 
 [node name="Floor" type="CollisionShape" parent="."]
@@ -33,7 +33,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.518436 )
 shape = SubResource( 3 )
 
 [node name="Top" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.995121, 0.0986598, 0, -0.0986598, 0.995121, 0, 0.993706, 2.54893 )
+transform = Transform( 1, 0, 0, 0, 0.995121, 0.0986598, 0, -0.0986598, 0.995121, 0, 1.97024, 2.45211 )
 shape = SubResource( 4 )
 
 [node name="stair" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 0, 0 )
