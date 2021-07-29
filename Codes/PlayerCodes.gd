@@ -20,9 +20,9 @@ var melee_damage = 50
 #Physics
 var walking = false
 var sprint = false
-var movementSpeed : float = 10
-var jumpForce : float = 5
-var gravity : float = 15
+var movementSpeed : float = 7.5
+var jumpForce : float = 10
+var gravity : float = 30
 
 #Cam look
 var minLookAngle : float = -90
@@ -57,7 +57,7 @@ func _physics_process(delta):
 	#set X and Y velocities to 0
 	vel.x = 0
 	vel.z = 0
-	movementSpeed = 5
+	movementSpeed = 7.5
 	
 	var input = Vector2()
 	
@@ -93,7 +93,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("sprint") and walking == true and state != ATTACK:
 		walking = false
 		sprint = true
-		movementSpeed = 10
+		movementSpeed = 15
 		state = RUN
 		
 	if Input.is_action_just_released("sprint"):
