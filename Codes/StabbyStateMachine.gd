@@ -12,7 +12,7 @@ enum {
 var state = IDLE
 var space_state
 var target
-var stabby_health = 100
+var health = 100
 
 const TURN_SPEED = 2
 
@@ -49,7 +49,7 @@ func _process(delta):
 		ATTACK:
 			eyes.look_at(target.global_transform.origin, Vector3.UP)
 			ap.play("Stabby")
-	if stabby_health <= 0:
+	if health <= 0:
 		ap.play("Die")
 		queue_free()
 
