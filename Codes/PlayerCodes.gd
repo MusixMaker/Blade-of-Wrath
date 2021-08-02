@@ -133,7 +133,6 @@ func _physics_process(delta):
 	if Input.is_action_pressed("jump") and is_on_floor():
 		vel.y = jumpForce
 		state = JUMP
-		yield(ap,"animation_finished")
 		state = IDLE
 
 func _process(delta):

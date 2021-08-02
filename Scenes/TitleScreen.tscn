@@ -13,55 +13,60 @@ __meta__ = {
 }
 
 [node name="Menu" type="VBoxContainer" parent="."]
-margin_left = 120.0
-margin_top = 80.0
-margin_right = 1160.0
-margin_bottom = 640.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Logo" type="TextureRect" parent="Menu"]
-margin_right = 1040.0
-texture = ExtResource( 1 )
-expand = true
-stretch_mode = 4
-
 [node name="CentreRow" type="HBoxContainer" parent="Menu"]
-margin_top = 4.0
-margin_right = 1040.0
-margin_bottom = 560.0
+margin_right = 1512.0
+margin_bottom = 720.0
 size_flags_vertical = 3
 
 [node name="Buttons" type="VBoxContainer" parent="Menu/CentreRow"]
-margin_right = 481.0
-margin_bottom = 482.0
+margin_right = 1023.0
+margin_bottom = 639.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
 custom_constants/separation = 2
 alignment = 1
 
+[node name="MarginContainer" type="MarginContainer" parent="Menu/CentreRow/Buttons"]
+margin_right = 1023.0
+margin_bottom = 155.0
+
+[node name="Logo" type="TextureRect" parent="Menu/CentreRow/Buttons/MarginContainer"]
+margin_right = 1023.0
+margin_bottom = 155.0
+texture = ExtResource( 1 )
+stretch_mode = 4
+
 [node name="Play" type="Button" parent="Menu/CentreRow/Buttons"]
-margin_right = 481.0
-margin_bottom = 174.0
+margin_top = 157.0
+margin_right = 1023.0
+margin_bottom = 331.0
 icon = ExtResource( 2 )
 flat = true
 
 [node name="Options" type="Button" parent="Menu/CentreRow/Buttons"]
-margin_top = 176.0
-margin_right = 481.0
-margin_bottom = 322.0
+margin_top = 333.0
+margin_right = 1023.0
+margin_bottom = 479.0
 icon = ExtResource( 4 )
 flat = true
 
 [node name="Quit" type="Button" parent="Menu/CentreRow/Buttons"]
-margin_top = 324.0
-margin_right = 481.0
-margin_bottom = 482.0
+margin_top = 481.0
+margin_right = 1023.0
+margin_bottom = 639.0
 icon = ExtResource( 3 )
 flat = true
 
 [node name="BackgroundColour" type="ColorRect" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
