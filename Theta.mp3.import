@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Theta.mp3-1d6851075c07a40fe14e1f7afe9a9906.mp3str"
+
+[deps]
+
+source_file="res://Theta.mp3"
+dest_files=[ "res://.import/Theta.mp3-1d6851075c07a40fe14e1f7afe9a9906.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
