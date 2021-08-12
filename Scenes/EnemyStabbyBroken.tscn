@@ -1206,19 +1206,19 @@ cast_to = Vector3( 0, 0, 10 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00699532, 1.23912, -0.0888806 )
 
 [node name="Waist Bone (Central)" type="Spatial" parent="Armature"]
-transform = Transform( 0.999858, 0.000378043, 0.0168427, 0.000377982, 0.998993, -0.0448617, -0.0168427, 0.0448617, 0.998851, -0.000932147, 0.00248285, 0.000232364 )
+transform = Transform( 1, 0, 0, 0, 1, 5.96046e-08, 0, -5.96046e-08, 1, 0, 1.62864, 0 )
 
 [node name="Abdomen (Upper)" type="Spatial" parent="Armature/Waist Bone (Central)"]
-transform = Transform( 0.999858, 0.000378042, 0.0168427, 0.000377983, 0.998993, -0.0448617, -0.0168427, 0.0448617, 0.998851, 1.16415e-10, 0.416896, 1.84809e-09 )
+transform = Transform( 1, 0, 0, 0, 0.996189, -0.0872259, 0, 0.0872259, 0.996189, 0, 0.416896, 0 )
 
 [node name="Torso2" type="Spatial" parent="Armature/Waist Bone (Central)/Abdomen (Upper)"]
-transform = Transform( 0.999858, 0.000378053, 0.0168429, 0.000377983, 0.998993, -0.0448617, -0.0168429, 0.0448617, 0.998851, 5.82077e-10, 0.419716, 1.86265e-09 )
+transform = Transform( 1, -1.79995e-21, 2.38418e-07, 1.77635e-15, 1, -7.45058e-09, -2.38418e-07, 7.45058e-09, 1, 3.55271e-15, 0.419716, 1.49012e-08 )
 
 [node name="Neck" type="Spatial" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2"]
-transform = Transform( 0.999858, 0.000378042, 0.0168427, 0.000377983, 0.998993, -0.0448617, -0.0168427, 0.0448617, 0.998851, -9.16771e-10, 1.37641, -2.23517e-08 )
+transform = Transform( 1, -1.76482e-08, 6.87822e-10, 1.76482e-08, 0.996967, -0.0778285, 6.87801e-10, 0.0778285, 0.996967, 1.06581e-14, 1.37641, -1.49012e-08 )
 
 [node name="Head" type="Spatial" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2/Neck"]
-transform = Transform( 0.999858, 0.000377982, 0.0168427, 0.00401188, 0.965645, -0.259834, -0.0163622, 0.259865, 0.965506, 3.72529e-09, 0.218767, 2.10226e-17 )
+transform = Transform( 1, -4.85271e-08, 4.95651e-09, 4.85236e-08, 0.979206, -0.202867, 4.99112e-09, 0.202867, 0.979206, 2.82366e-14, 0.218767, 1.83834e-08 )
 
 [node name="Cube001" type="MeshInstance" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2/Neck/Head"]
 transform = Transform( 0.326553, 0.00453407, 0.026926, -0.00407894, 0.327618, -0.00569914, -0.0269987, 0.00534414, 0.326535, 0.0090028, -1.1693, 0.660228 )
@@ -1231,13 +1231,13 @@ mesh = SubResource( 4 )
 material/0 = null
 
 [node name="Left Bicep2" type="Spatial" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2"]
-transform = Transform( -0.9473, 0.257326, -0.190805, -0.268644, -0.962582, 0.0355832, -0.174509, 0.0849666, 0.980983, 0.610618, 1.1856, 0.0599802 )
+transform = Transform( -0.9473, 0.320348, 7.59203e-07, -0.320348, -0.947298, 0.00214544, 0.000688007, 0.00203213, 0.999998, 0.610618, 1.13083, 0.0647758 )
 
 [node name="Left Forearm2" type="Spatial" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2/Left Bicep2"]
-transform = Transform( 0.956469, 0.285554, -0.0602191, -0.288039, 0.956884, -0.0374956, 0.0469156, 0.0532088, 0.997481, -5.88947e-08, 1.10002, -1.34464e-09 )
+transform = Transform( 0.949212, 0.312111, -0.0397903, -0.314607, 0.939723, -0.133951, -0.00441578, 0.139666, 0.990189, -1.47772e-07, 1.10002, -1.66593e-08 )
 
 [node name="Left Hand2" type="Spatial" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2/Left Bicep2/Left Forearm2"]
-transform = Transform( 0.999927, 0.0050282, 0.010969, -0.00355527, 0.991457, -0.130388, -0.0115309, 0.13034, 0.991402, -4.43713e-08, 0.886493, -1.44951e-12 )
+transform = Transform( 0.999972, 0.00460138, -0.00591249, -0.0053762, 0.990343, -0.138538, 0.00521793, 0.138565, 0.99034, -1.03365e-07, 0.886493, 2.97237e-09 )
 
 [node name="Left Hand" type="MeshInstance" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2/Left Bicep2/Left Forearm2/Left Hand2"]
 transform = Transform( 0.0524736, 0.00229803, 0.0103278, 0.00147749, 0.172087, -0.0321292, -0.00580234, 0.064602, 0.0852185, 0.0714766, 1.79782, 0.861667 )
@@ -1270,13 +1270,13 @@ mesh = SubResource( 16 )
 material/0 = null
 
 [node name="Right Bicep2" type="Spatial" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2"]
-transform = Transform( -0.936237, -0.351318, 0.00605055, 0.35102, -0.934398, 0.0607032, -0.0156725, 0.0589564, 0.998138, -0.577351, 1.1856, 0.0599799 )
+transform = Transform( -0.936195, -0.35148, 1.03097e-06, 0.351077, -0.93512, 0.0479186, -0.0168415, 0.0448615, 0.998851, -0.577351, 1.13083, 0.0647756 )
 
 [node name="Right Forearm2" type="Spatial" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2/Right Bicep2"]
-transform = Transform( 0.605157, -0.262197, 0.75169, 0.205987, 0.963624, 0.170289, -0.768996, 0.0517863, 0.637153, 7.33088e-09, 1.12173, -9.27336e-10 )
+transform = Transform( 0.941317, -0.337206, 0.014627, 0.337341, 0.94135, -0.00788516, -0.0111102, 0.0123567, 0.999862, -3.5896e-08, 1.12173, -3.22018e-09 )
 
 [node name="Right Hand2" type="Spatial" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2/Right Bicep2/Right Forearm2"]
-transform = Transform( 0.849887, -0.433922, -0.299004, 0.454681, 0.890654, -0.000156127, 0.266377, -0.135819, 0.954252, 8.14884e-08, 0.878599, -6.61219e-08 )
+transform = Transform( 0.999825, -0.0185367, -0.00242993, 0.0180273, 0.990358, -0.13735, 0.00495252, 0.137282, 0.99052, 2.2807e-08, 0.878599, -6.22406e-09 )
 
 [node name="Right Hand" type="MeshInstance" parent="Armature/Waist Bone (Central)/Abdomen (Upper)/Torso2/Right Bicep2/Right Forearm2/Right Hand2"]
 transform = Transform( -0.0324199, -0.0458105, 0.0686567, -0.0280062, -0.105287, -0.0572963, 0.0308856, -0.143558, 0.0201129, 0.978699, 1.21859, 1.012 )
@@ -1319,13 +1319,13 @@ mesh = SubResource( 32 )
 material/0 = null
 
 [node name="Left Quad (Lower Left)" type="Spatial" parent="Armature/Waist Bone (Central)"]
-transform = Transform( -0.992672, 0.115899, 0.034192, -0.118329, -0.989696, -0.0806313, 0.0244946, -0.0840864, 0.996157, 0.277991, -0.275436, -0.00243448 )
+transform = Transform( -0.992672, 0.115899, 0.034192, -0.118329, -0.989696, -0.0806311, 0.0244946, -0.0840862, 0.996157, 0.277991, -0.275436, -0.00243448 )
 
 [node name="Left Shin2" type="Spatial" parent="Armature/Waist Bone (Central)/Left Quad (Lower Left)"]
-transform = Transform( 0.993148, 0.115992, -0.0142693, -0.116618, 0.991578, -0.0563386, 0.00761435, 0.0576166, 0.99831, -5.48779e-08, 1.08976, 1.91725e-08 )
+transform = Transform( 0.993148, 0.115992, -0.0142693, -0.116618, 0.991578, -0.0563386, 0.00761435, 0.0576166, 0.99831, -2.18781e-08, 1.08976, 1.10996e-09 )
 
 [node name="Left Foot2" type="Spatial" parent="Armature/Waist Bone (Central)/Left Quad (Lower Left)/Left Shin2"]
-transform = Transform( 0.999708, 0.0169124, -0.017282, -0.0229658, 0.440415, -0.897501, -0.00756766, 0.897635, 0.440675, -2.39739e-08, 1.24795, 5.35059e-09 )
+transform = Transform( 0.999708, 0.0169124, -0.017282, -0.0229658, 0.440416, -0.8975, -0.00756765, 0.897634, 0.440676, -1.9718e-09, 1.24795, 2.33118e-08 )
 
 [node name="Left Foot" type="MeshInstance" parent="Armature/Waist Bone (Central)/Left Quad (Lower Left)/Left Shin2/Left Foot2"]
 transform = Transform( -0.120468, 0.00250266, -0.00219068, -0.00301071, -0.0483202, 0.110362, 0.00141349, 0.110375, 0.0483642, -0.0360911, 0.70192, -1.65732 )
@@ -1351,10 +1351,10 @@ material/0 = null
 transform = Transform( -0.992658, -0.120451, -0.00970443, 0.120659, -0.992374, -0.0252058, -0.00659432, -0.0261922, 0.999629, -0.297674, -0.275436, -0.00243449 )
 
 [node name="Right Shin2" type="Spatial" parent="Armature/Waist Bone (Central)/Right Quad (Lower Right)"]
-transform = Transform( 0.993184, -0.115416, -0.01624, 0.116114, 0.991875, 0.0519808, 0.0101086, -0.0535123, 0.998516, -5.93583e-08, 1.08976, -1.6653e-08 )
+transform = Transform( 0.993184, -0.115416, -0.01624, 0.116114, 0.991875, 0.0519808, 0.0101086, -0.0535123, 0.998516, -3.37023e-08, 1.08976, 2.22894e-09 )
 
 [node name="Right Foot2" type="Spatial" parent="Armature/Waist Bone (Central)/Right Quad (Lower Right)/Right Shin2"]
-transform = Transform( 0.999847, -0.010874, -0.0137365, -0.0078134, 0.425003, -0.905158, 0.0156807, 0.905127, 0.424853, -2.242e-08, 1.24795, -1.13012e-07 )
+transform = Transform( 0.999847, -0.010874, -0.0137365, -0.0078134, 0.425003, -0.905158, 0.0156807, 0.905127, 0.424853, 5.75891e-09, 1.24795, 2.24894e-08 )
 
 [node name="Right Foot" type="MeshInstance" parent="Armature/Waist Bone (Central)/Right Quad (Lower Right)/Right Shin2/Right Foot2"]
 transform = Transform( -0.120508, 0.00135368, -0.000126635, -0.000680644, -0.0503526, 0.10949, 0.00117697, 0.109483, 0.0503573, -0.0203984, 0.791577, -1.61579 )

@@ -1,4 +1,4 @@
-extends Spatial
+extends KinematicBody
 
 enum {
 	IDLE,
@@ -13,6 +13,8 @@ var state = IDLE
 var space_state
 var target
 var health = 100
+var direction
+var speed = 100
 
 const TURN_SPEED = 2
 
@@ -44,6 +46,7 @@ func _process(delta):
 				ap.play("Run")
 				eyes.look_at(target.global_transform.origin, Vector3.UP)
 				rotate_y(deg2rad(-eyes.rotation.y * TURN_SPEED))
+				move_to_target(delta)
 			else:
 				state = IDLE
 		ATTACK:
@@ -53,7 +56,9 @@ func _process(delta):
 		ap.play("Die")
 		queue_free()
 
-
+func move_to_target(delta):
+	var direction = (target.transform.origin - transform.origin).normalized()
+	move_and_slide(direction * speed * delta, Vector3.UP)
 
 func _on_StabTimer_timeout():
 	if raycast.is_colliding():
