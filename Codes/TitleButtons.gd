@@ -1,5 +1,5 @@
 extends Control
-onready var ap = $MenuContainer/Fade/FadePlayer
+onready var ap = $Fade/FadePlayer
 onready var map = $AudioStreamPlayer/Musicfader
 var fadequit = false
 var fadegame = false

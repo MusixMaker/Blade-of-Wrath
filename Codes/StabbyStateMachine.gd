@@ -14,7 +14,7 @@ var space_state
 var target
 var health = 100
 var direction
-var speed = 100
+var speed = 7.5
 
 const TURN_SPEED = 2
 
