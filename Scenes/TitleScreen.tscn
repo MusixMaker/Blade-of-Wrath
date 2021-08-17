@@ -4,7 +4,7 @@
 [ext_resource path="res://Codes/TitleButtons.gd" type="Script" id=2]
 [ext_resource path="res://Theta.mp3" type="AudioStream" id=3]
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=1]
 resource_name = "FadeMusicIn"
 length = 2.5
 tracks/0/type = "value"
@@ -20,7 +20,7 @@ tracks/0/keys = {
 "values": [ -80.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=2]
 resource_name = "FadeMusicOut"
 length = 2.5
 tracks/0/type = "value"
@@ -36,8 +36,7 @@ tracks/0/keys = {
 "values": [ 0.0, -80.0 ]
 }
 
-[sub_resource type="Animation" id=1]
-resource_name = "FadeIn"
+[sub_resource type="Animation" id=3]
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:color")
@@ -52,8 +51,7 @@ tracks/0/keys = {
 "values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "FadeOut"
+[sub_resource type="Animation" id=4]
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:color")
@@ -147,13 +145,12 @@ stream = ExtResource( 3 )
 volume_db = -80.0
 
 [node name="Musicfader" type="AnimationPlayer" parent="AudioStreamPlayer"]
-anims/FadeMusicIn = SubResource( 3 )
-anims/FadeMusicOut = SubResource( 4 )
+anims/FadeMusicIn = SubResource( 1 )
+anims/FadeMusicOut = SubResource( 2 )
 
 [node name="Fade" type="ColorRect" parent="."]
-visible = false
-margin_right = 1280.0
-margin_bottom = 720.0
+margin_right = 1920.0
+margin_bottom = 1080.0
 mouse_filter = 2
 color = Color( 0, 0, 0, 1 )
 __meta__ = {
@@ -161,8 +158,8 @@ __meta__ = {
 }
 
 [node name="FadePlayer" type="AnimationPlayer" parent="Fade"]
-anims/FadeIn = SubResource( 1 )
-anims/FadeOut = SubResource( 2 )
+anims/FadeIn = SubResource( 3 )
+anims/FadeOut = SubResource( 4 )
 
 [connection signal="pressed" from="MenuContainer/InnerMenu/VBoxContainer/Buttons/Buttons/Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="MenuContainer/InnerMenu/VBoxContainer/Buttons/Buttons/Options" to="." method="_on_Options_pressed"]
