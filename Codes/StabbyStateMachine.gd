@@ -15,6 +15,7 @@ var target
 var health = 100
 var direction
 var speed = 7.5
+var dead = false
 
 const TURN_SPEED = 2
 
@@ -37,6 +38,8 @@ func _on_SightRange_body_exited(body):
 	attacktimer.stop()
 
 func _process(delta):
+	if health <= 0:
+		state = DEAD
 	match state:
 		IDLE:
 			ap.play("Idle")
@@ -52,9 +55,9 @@ func _process(delta):
 		ATTACK:
 			eyes.look_at(target.global_transform.origin, Vector3.UP)
 			ap.play("Stabby")
-	if health <= 0:
-		ap.play("Die")
-		queue_free()
+		DEAD:
+			ap.play("Die")
+			dead = true
 
 func move_to_target(delta):
 	var direction = (target.transform.origin - transform.origin).normalized()
@@ -68,3 +71,8 @@ func _on_StabTimer_timeout():
 			state = ATTACK
 			attacktimer.start()
 
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if dead == true:
+		queue_free()
+	else:
+		pass

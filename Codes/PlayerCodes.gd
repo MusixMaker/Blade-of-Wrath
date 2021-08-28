@@ -11,8 +11,8 @@ enum{
 }
 
 #Stats
-var cur_hp : int = 10
-var max_hp : int = 10
+var cur_hp : int = 100
+var max_hp : int = 100
 var score : int = 0
 var state = IDLE
 var melee_damage = 50
@@ -20,7 +20,7 @@ var melee_damage = 50
 #Physics
 var walking = false
 var sprint = false
-var movementSpeed : float = 7.5
+var movementSpeed : float = 5
 var jumpForce : float = 10
 var gravity : float = 30
 
@@ -43,6 +43,7 @@ func melee():
 	if ap.current_animation == "Stabby":
 		for body in hitbox.get_overlapping_bodies():
 			if body.is_in_group("Enemy"):
+				yield(get_tree().create_timer(0.5), "timeout")
 				body.health -= melee_damage
 	yield(ap,"animation_finished")
 	state = IDLE
@@ -57,7 +58,7 @@ func _physics_process(delta):
 	#set X and Y velocities to 0
 	vel.x = 0
 	vel.z = 0
-	movementSpeed = 7.5
+	movementSpeed = 5
 	
 	var input = Vector2()
 	
@@ -93,16 +94,19 @@ func _physics_process(delta):
 	if Input.is_action_pressed("sprint") and walking == true and state != ATTACK:
 		walking = false
 		sprint = true
-		movementSpeed = 15
+		movementSpeed = 10
 		state = RUN
 		
 	if Input.is_action_just_released("sprint"):
 		sprint = false
 	
 		
-	#changes statses for movement
+	#changes states for movement
 	if walking == true and state != ATTACK:
 		state = WALK
+		
+	if walking == true and sprint == true and state != ATTACK:
+		state = RUN
 		
 	if walking == false and sprint == false and state != ATTACK:
 		state = IDLE

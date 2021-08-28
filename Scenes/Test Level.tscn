@@ -3658,3 +3658,111 @@ transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7, 0.4
 [node name="Enemies" type="Spatial" parent="."]
 
 [node name="EnemyStabby" parent="Enemies" instance=ExtResource( 9 )]
+
+[node name="EnemyStabby6" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 11, 3, 35 )
+
+[node name="EnemyStabby7" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 11, 3, 37 )
+
+[node name="EnemyStabby8" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 11, 3, 39 )
+
+[node name="EnemyStabby9" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 11, 3, 41 )
+
+[node name="EnemyStabby10" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 11, 3, 43 )
+
+[node name="EnemyStabby11" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 11, 3, 45 )
+
+[node name="EnemyStabby12" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 11, 3, 47 )
+
+[node name="EnemyStabby13" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 11, 3, 49 )
+
+[node name="EnemyStabby14" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 11, 3, 51 )
+
+[node name="EnemyStabby15" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 11, 3, 53 )
+
+[node name="EnemyStabby16" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 11, 3, 55 )
+
+[node name="EnemyStabby17" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 11, 3, 57 )
+
+[node name="EnemyStabby18" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 11, 3, 59 )
+
+[node name="EnemyStabby19" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 11, 3, 61 )
+
+[node name="EnemyStabby20" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, -16, 3, 61 )
+
+[node name="EnemyStabby21" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, -16, 3, 59 )
+
+[node name="EnemyStabby22" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, -16, 3, 57 )
+
+[node name="EnemyStabby23" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, -16, 3, 55 )
+
+[node name="EnemyStabby24" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, -16, 3, 53 )
+
+[node name="EnemyStabby25" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, -16, 3, 51 )
+
+[node name="EnemyStabby26" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, -16, 3, 49 )
+
+[node name="EnemyStabby27" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, -16, 3, 47 )
+
+[node name="EnemyStabby28" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, -16, 3, 45 )
+
+[node name="EnemyStabby29" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, -16, 3, 43 )
+
+[node name="EnemyStabby30" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, -16, 3, 41 )
+
+[node name="EnemyStabby31" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, -16, 3, 39 )
+
+[node name="EnemyStabby32" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, -16, 3, 37 )
+
+[node name="EnemyStabby33" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, -16, 3, 35 )
+
+[node name="EnemyStabby34" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 11, 3, 31 )
+
+[node name="EnemyStabby35" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 11, 3, 33 )
+
+[node name="EnemyStabby36" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, -16, 3, 33 )
+
+[node name="EnemyStabby37" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, -16, 3, 31 )
+
+[node name="EnemyStabby2" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 38, 3, -2 )
+
+[node name="EnemyStabby3" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( 0.141421, 0, -0.141421, 0, 0.2, 0, 0.141421, 0, 0.141421, 44, 3, -2 )
+
+[node name="EnemyStabby4" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -0.0517638, 0, -0.193185, 0, 0.2, 0, 0.193185, 0, -0.0517638, 44, 3, 2 )
+
+[node name="EnemyStabby5" parent="Enemies" instance=ExtResource( 9 )]
+transform = Transform( -0.2, 0, 0, 0, 0.2, 0, 0, 0, -0.2, 38, 3, 2 )
