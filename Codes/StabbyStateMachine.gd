@@ -12,7 +12,7 @@ enum {
 var state = IDLE
 var space_state
 var target
-var health = 100
+var health = 400
 var direction
 var speed = 7.5
 var dead = false
