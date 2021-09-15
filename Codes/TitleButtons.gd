@@ -16,7 +16,7 @@ func _on_Play_pressed():
 	fadegame = true
 
 func _on_Options_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene("res://Scenes/Options.tscn")
 
 func _on_Quit_pressed():
 	ap.play("FadeOut")

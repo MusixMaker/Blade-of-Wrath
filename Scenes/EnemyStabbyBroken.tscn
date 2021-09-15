@@ -1193,7 +1193,7 @@ tracks/16/imported = true
 tracks/16/enabled = true
 tracks/16/keys = PoolRealArray( 0, 1, 0, 1.62864, 0, -2.98023e-08, 0, 0, 1, 1, 1, 1, 1.66667, 1, 0, 1.62864, 0, -2.98023e-08, 0, 0, 1, 1, 1, 1 )
 
-[node name="EnemyStabby" type="Spatial"]
+[node name="EnemyStabby" type="KinematicBody"]
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
 script = ExtResource( 1 )
 

@@ -1,15 +1,18 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
 
-[node name="Pause" type="Control"]
+[ext_resource path="res://Codes/Pause.gd" type="Script" id=1]
+
+[node name="TitleScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="MenuContainer" type="MarginContainer" parent="."]
-margin_right = 1280.0
-margin_bottom = 720.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 custom_constants/margin_right = 110
 custom_constants/margin_top = 25
 custom_constants/margin_left = 110
@@ -18,18 +21,61 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="InnerMenuContainer" type="MarginContainer" parent="MenuContainer"]
+[node name="InnerMenu" type="MarginContainer" parent="MenuContainer"]
 margin_left = 110.0
 margin_top = 25.0
-margin_right = 1170.0
-margin_bottom = 695.0
+margin_right = 1810.0
+margin_bottom = 1055.0
 custom_constants/margin_right = 30
-custom_constants/margin_top = 35
+custom_constants/margin_top = 25
 custom_constants/margin_left = 30
-custom_constants/margin_bottom = 35
+custom_constants/margin_bottom = 25
 
-[node name="VBox" type="VBoxContainer" parent="MenuContainer/InnerMenuContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuContainer/InnerMenu"]
 margin_left = 30.0
-margin_top = 35.0
-margin_right = 1030.0
-margin_bottom = 635.0
+margin_top = 25.0
+margin_right = 1670.0
+margin_bottom = 1005.0
+custom_constants/separation = 1
+
+[node name="Buttons" type="MarginContainer" parent="MenuContainer/InnerMenu/VBoxContainer"]
+margin_right = 1640.0
+margin_bottom = 428.0
+custom_constants/margin_top = 300
+
+[node name="Buttons" type="VBoxContainer" parent="MenuContainer/InnerMenu/VBoxContainer/Buttons"]
+margin_top = 300.0
+margin_right = 1640.0
+margin_bottom = 428.0
+custom_constants/separation = 16
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Audio" type="Button" parent="MenuContainer/InnerMenu/VBoxContainer/Buttons/Buttons"]
+margin_right = 1640.0
+margin_bottom = 20.0
+text = "Toggle Sound"
+
+[node name="Sfx" type="Button" parent="MenuContainer/InnerMenu/VBoxContainer/Buttons/Buttons"]
+margin_top = 36.0
+margin_right = 1640.0
+margin_bottom = 56.0
+text = "Toggle Sfx"
+
+[node name="Fps" type="Button" parent="MenuContainer/InnerMenu/VBoxContainer/Buttons/Buttons"]
+margin_top = 72.0
+margin_right = 1640.0
+margin_bottom = 92.0
+text = "Show Fps"
+
+[node name="Quit" type="Button" parent="MenuContainer/InnerMenu/VBoxContainer/Buttons/Buttons"]
+margin_top = 108.0
+margin_right = 1640.0
+margin_bottom = 128.0
+text = "Quit"
+
+[connection signal="pressed" from="MenuContainer/InnerMenu/VBoxContainer/Buttons/Buttons/Audio" to="." method="_on_Audio_pressed"]
+[connection signal="pressed" from="MenuContainer/InnerMenu/VBoxContainer/Buttons/Buttons/Sfx" to="." method="_on_Sfx_pressed"]
+[connection signal="pressed" from="MenuContainer/InnerMenu/VBoxContainer/Buttons/Buttons/Fps" to="." method="_on_Fps_pressed"]
+[connection signal="pressed" from="MenuContainer/InnerMenu/VBoxContainer/Buttons/Buttons/Quit" to="." method="_on_Quit_pressed"]
