@@ -18,6 +18,10 @@ config/name="Blade of Wrath"
 run/main_scene="res://Scenes/TitleScreen.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Pause="*res://Scenes/Pause.tscn"
+
 [debug]
 
 settings/stdout/print_fps=true
