@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+var pause = false
+
 func _ready():
 	pass
 
@@ -7,10 +9,11 @@ func _input(event):
 	if event.is_action_pressed("Pause"):
 		$Background.visible = !$Background.visible
 		get_tree().paused = !get_tree().paused
-		if Input.MOUSE_MODE == Input.MOUSE_MODE_CONFINED:
-			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		elif Input.MOUSE_MODE == Input.MOUSE_MODE_CAPTURED:
+	
+		if get_tree().paused:
 			Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)
+		else:
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
 func _on_Audio_pressed():
