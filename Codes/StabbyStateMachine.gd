@@ -14,8 +14,12 @@ var space_state
 var target
 var health = 400
 var direction
-var speed = 7.5
+var speed = 20
 var dead = false
+var vel = Vector3()
+var gravity = 30
+var path = []
+var path_node = 0
 
 const TURN_SPEED = 2
 
@@ -23,6 +27,8 @@ onready var raycast = $RayCast
 onready var ap = $AnimationPlayer
 onready var eyes = $Eyes
 onready var attacktimer = $StabTimer
+onready var nav = get_parent()
+onready var player = $"Navigation/NavigationMeshInstance/Player"
 
 func _ready():
 	space_state = get_world().direct_space_state
@@ -37,7 +43,8 @@ func _on_SightRange_body_exited(body):
 	state = IDLE
 	attacktimer.stop()
 
-func _process(delta):
+func _physics_process(delta):
+	vel.y -= gravity * delta
 	if health <= 0:
 		state = DEAD
 	match state:
@@ -60,6 +67,7 @@ func _process(delta):
 			dead = true
 
 func move_to_target(delta):
+	#vel = move_and_slide(vel, Vector3(1,1,0))
 	var direction = (target.transform.origin - transform.origin).normalized()
 	move_and_slide(direction * speed * delta, Vector3.UP)
 
