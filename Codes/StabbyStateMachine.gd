@@ -18,8 +18,6 @@ var speed = 20
 var dead = false
 var vel = Vector3()
 var gravity = 30
-var path = []
-var path_node = 0
 
 const TURN_SPEED = 2
 
@@ -27,8 +25,6 @@ onready var raycast = $RayCast
 onready var ap = $AnimationPlayer
 onready var eyes = $Eyes
 onready var attacktimer = $StabTimer
-onready var nav = get_parent()
-onready var player = $"Navigation/NavigationMeshInstance/Player"
 
 func _ready():
 	space_state = get_world().direct_space_state

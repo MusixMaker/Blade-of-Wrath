@@ -1558,7 +1558,10 @@ anims/Walk = SubResource( 60 )
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 2.6032, 0 )
 shape = SubResource( 61 )
 
+[node name="WalkTimer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="SightRange" to="." method="_on_SightRange_body_entered"]
 [connection signal="body_exited" from="SightRange" to="." method="_on_SightRange_body_exited"]
 [connection signal="timeout" from="StabTimer" to="." method="_on_StabTimer_timeout"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="WalkTimer" to="." method="_on_WalkTimer_timeout"]
