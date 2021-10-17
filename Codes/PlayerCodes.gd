@@ -1,5 +1,6 @@
 extends KinematicBody
 
+#State machine
 enum{
 	IDLE,
 	WALK,
@@ -41,6 +42,7 @@ onready var hitbox = $Hitbox
 func melee():
 	#ap.play("Stabby")
 	if ap.current_animation == "Stabby":
+		#Finds if enemy is inside hitbox and allows the player to hit them if they are
 		for body in hitbox.get_overlapping_bodies():
 			if body.is_in_group("Enemy"):
 				yield(get_tree().create_timer(0.5), "timeout")
@@ -55,6 +57,7 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) 
 
 func _physics_process(delta):
+	#Sets velocities and speed
 	#print(is_on_floor())#
 	#set X and Y velocities to 0
 	vel.x = 0
@@ -100,6 +103,7 @@ func _physics_process(delta):
 		
 	if Input.is_action_just_released("sprint"):
 		sprint = false
+		movementSpeed =5
 	
 		
 	#changes states for movement
