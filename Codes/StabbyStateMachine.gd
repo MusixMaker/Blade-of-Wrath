@@ -18,6 +18,8 @@ var speed = 20
 var dead = false
 var vel = Vector3()
 var gravity = 30
+var path = []
+var path_node = 0
 
 #Constats
 const TURN_SPEED = 2
@@ -27,6 +29,8 @@ onready var raycast = $RayCast
 onready var ap = $AnimationPlayer
 onready var eyes = $Eyes
 onready var attacktimer = $StabTimer
+onready var nav = get_parent()
+onready var player = $"Player"
 
 #Functions
 func _ready():
@@ -50,18 +54,27 @@ func _physics_process(delta):
 	vel.y -= gravity * delta
 	if health <= 0:
 		state = DEAD
+		
+	if path_node < path.size():
+		state = RUN
 	match state:
 		IDLE:
 			ap.play("Idle")
 		RUN:
-			var result = space_state.intersect_ray(global_transform.origin, target.global_transform.origin)
-			if result.collider.is_in_group("Player"):
-				ap.play("Run")
-				eyes.look_at(target.global_transform.origin, Vector3.UP)
-				rotate_y(deg2rad(-eyes.rotation.y * TURN_SPEED))
-				move_to_target(delta)
+			#var result = space_state.intersect_ray(global_transform.origin, target.global_transform.origin)
+			#if result.collider.is_in_group("Player"):
+			#	ap.play("Run")
+			#	eyes.look_at(target.global_transform.origin, Vector3.UP)
+			#	rotate_y(deg2rad(-eyes.rotation.y * TURN_SPEED))
+			#else:
+			#	state = IDLE
+			var direction = (path[path_node] - global_transform.origin)
+			if direction.length() < 1:
+				path_node += 1
 			else:
-				state = IDLE
+				move_and_slide(direction.normalised() * speed, Vector3.UP) 
+				ap.play("Run")
+			state = IDLE
 		ATTACK:
 			eyes.look_at(target.global_transform.origin, Vector3.UP)
 			ap.play("Stabby")
@@ -70,10 +83,9 @@ func _physics_process(delta):
 			dead = true
 
 #Movement function
-func move_to_target(delta):
-	#vel = move_and_slide(vel, Vector3(1,1,0))
-	var direction = (target.transform.origin - transform.origin).normalized()
-	move_and_slide(direction * speed * delta, Vector3.UP)
+func move_to(target_pos):
+	path = nav.get_simple_path(global_transform.origin, target_pos)
+	path_node = 0
 
 #Attack time
 func _on_StabTimer_timeout():
@@ -91,3 +103,7 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 	else:
 		#If yo aint dead, this is ignored here
 		pass
+
+
+func _on_WalkTimer_timeout():
+	move_to(player.global_transform.origin)
