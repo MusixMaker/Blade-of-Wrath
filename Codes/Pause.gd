@@ -25,11 +25,6 @@ func _on_Audio_pressed():
 	pass
 
 
-func _on_Sfx_pressed():
-	#Replace with function body
-	pass
-
-
 func _on_Fps_pressed():
 	#Replace with function body
 	pass
@@ -38,3 +33,7 @@ func _on_Fps_pressed():
 func _on_Quit_pressed():
 	get_tree().quit()
 	#Quits the game
+
+
+func _on_Restart_pressed():
+	get_tree().change_scene("res://Scenes/Test Level.tscn")

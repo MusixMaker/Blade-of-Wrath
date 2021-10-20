@@ -9,10 +9,6 @@ func _on_Audio_pressed():
 	pass # Replace with function body.
 
 
-func _on_Sfx_pressed():
-	pass # Replace with function body.
-
-
 func _on_Fps_pressed():
 	pass # Replace with function body.
 

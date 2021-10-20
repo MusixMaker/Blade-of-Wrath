@@ -63,13 +63,13 @@ margin_right = 1640.0
 margin_bottom = 20.0
 text = "Toggle Sound"
 
-[node name="Sfx" type="Button" parent="Background/MenuContainer/InnerMenu/VBoxContainer/Buttons/Buttons"]
+[node name="Fps" type="Button" parent="Background/MenuContainer/InnerMenu/VBoxContainer/Buttons/Buttons"]
 margin_top = 36.0
 margin_right = 1640.0
 margin_bottom = 56.0
 text = "Toggle Sfx"
 
-[node name="Fps" type="Button" parent="Background/MenuContainer/InnerMenu/VBoxContainer/Buttons/Buttons"]
+[node name="Restart" type="Button" parent="Background/MenuContainer/InnerMenu/VBoxContainer/Buttons/Buttons"]
 margin_top = 72.0
 margin_right = 1640.0
 margin_bottom = 92.0
@@ -82,6 +82,8 @@ margin_bottom = 128.0
 text = "Quit"
 
 [connection signal="pressed" from="Background/MenuContainer/InnerMenu/VBoxContainer/Buttons/Buttons/Audio" to="." method="_on_Audio_pressed"]
-[connection signal="pressed" from="Background/MenuContainer/InnerMenu/VBoxContainer/Buttons/Buttons/Sfx" to="." method="_on_Sfx_pressed"]
+[connection signal="pressed" from="Background/MenuContainer/InnerMenu/VBoxContainer/Buttons/Buttons/Fps" to="." method="_on_Sfx_pressed"]
 [connection signal="pressed" from="Background/MenuContainer/InnerMenu/VBoxContainer/Buttons/Buttons/Fps" to="." method="_on_Fps_pressed"]
+[connection signal="pressed" from="Background/MenuContainer/InnerMenu/VBoxContainer/Buttons/Buttons/Restart" to="." method="_on_Fps_pressed"]
+[connection signal="pressed" from="Background/MenuContainer/InnerMenu/VBoxContainer/Buttons/Buttons/Restart" to="." method="_on_Restart_pressed"]
 [connection signal="pressed" from="Background/MenuContainer/InnerMenu/VBoxContainer/Buttons/Buttons/Quit" to="." method="_on_Quit_pressed"]
