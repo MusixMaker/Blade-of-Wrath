@@ -37,3 +37,9 @@ func _on_Quit_pressed():
 
 func _on_Restart_pressed():
 	get_tree().change_scene("res://Scenes/Test Level.tscn")
+	$Background.visible = !$Background.visible
+	get_tree().paused = !get_tree().paused
+	if get_tree().paused:
+		Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)
+	else:
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

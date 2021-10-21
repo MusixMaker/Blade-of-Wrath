@@ -14,7 +14,7 @@ var space_state
 var target
 var health = 400
 var direction
-var speed = 20
+var speed = 2
 var dead = false
 var vel = Vector3()
 var gravity = 30
@@ -35,7 +35,7 @@ onready var player = $"../../Player" as KinematicBody
 #Functions
 func _ready():
 	#space_state = get_world().direct_space_state
-	path = nav.get_simple_path(global_transform.origin, player.global_transform.origin)
+	pass
 
 #If The player is in it's sights
 func _on_SightRange_body_entered(body):
@@ -52,12 +52,19 @@ func _on_SightRange_body_exited(body):
 
 #State machine and death time
 func _physics_process(delta):
-	vel.y -= gravity * delta
-	if health <= 0:
-		state = DEAD
-		
+	update_path(player.global_transform.origin)
+	if current_node < path.size():
+		var direction: Vector3 = path[current_node] - global_transform.origin
+				
+		if direction.length() < 1:
+			current_node += 1
+		else:
+			move_and_slide(direction.normalized() * speed)
 	#if path_node < path.size():
 		#state = RUN
+	if health <= 0:
+		state = DEAD
+#
 	match state:
 		IDLE:
 			ap.play("Idle")
@@ -76,13 +83,7 @@ func _physics_process(delta):
 				#move_and_slide(direction.normalised() * speed, Vector3.UP) 
 				#ap.play("Run")
 			#state = IDLE
-			var direction: Vector3 = path[0] - global_transform.origin
-			
-			if direction.length() < 1:
-				current_node += 1
-			else:
-				print("DIR: ", direction)
-				move_and_slide(direction.normalized() * speed)
+			pass
 			
 		ATTACK:
 			eyes.look_at(target.global_transform.origin, Vector3.UP)
@@ -95,6 +96,9 @@ func _physics_process(delta):
 #func move_to(target_pos):
 	#path = nav.get_simple_path(global_transform.origin, target_pos)
 	#path_node = 0
+
+func update_path(target_position):
+	path = nav.get_simple_path(global_transform.origin, target_position)
 
 #Attack time
 func _on_StabTimer_timeout():
