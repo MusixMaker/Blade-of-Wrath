@@ -11,6 +11,7 @@ func _ready():
 
 
 func _on_Play_pressed():
+	PlayerStats.PLAYER_HEALTH = PlayerStats.MAX_PLAYER_HEALTH
 	ap.play("FadeOut")
 	map.play("FadeMusicOut")
 	fadegame = true

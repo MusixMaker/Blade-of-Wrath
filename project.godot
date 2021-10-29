@@ -21,6 +21,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Pause="*res://Scenes/Pause.tscn"
+PlayerStats="*res://Codes/PlayerStats.gd"
 
 [debug]
 

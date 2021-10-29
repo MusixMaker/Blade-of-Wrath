@@ -106,6 +106,7 @@ func _on_StabTimer_timeout():
 		var hit = raycast.get_collider()
 		if hit.is_in_group("Player"):
 			print("Hit")
+			PlayerStats.PLAYER_HEALTH -= 10
 			state = ATTACK
 			attacktimer.start()
 

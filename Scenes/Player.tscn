@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Codes/PlayerCodes.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/PlayerTryout.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/You I.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.5
@@ -25,6 +26,8 @@ shape = SubResource( 1 )
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.834072, 0.167925 )
 fov = 90.0
+
+[node name="You I" parent="Camera" instance=ExtResource( 3 )]
 
 [node name="Hitbox" type="Area" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33227e-15, 0.809677, 0.102236 )

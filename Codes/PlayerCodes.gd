@@ -12,8 +12,8 @@ enum{
 }
 
 #Stats
-var cur_hp : int = 100
-var max_hp : int = 100
+#var cur_hp : int = 100
+#var max_hp : int = 100
 var score : int = 0
 var state = IDLE
 var melee_damage = 50
