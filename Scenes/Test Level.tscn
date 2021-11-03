@@ -1269,10 +1269,10 @@ transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 8.0282, 0
 transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 12.0282, 0, 25.0002 )
 
 [node name="Large Wall22" parent="Navigation/NavigationMeshInstance/Walls/LargeWalls" instance=ExtResource( 1 )]
-transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 26.0282, 0, 13.0002 )
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 25.9619, 0, 13.0002 )
 
 [node name="Large Wall24" parent="Navigation/NavigationMeshInstance/Walls/LargeWalls" instance=ExtResource( 1 )]
-transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 26.0282, 0, 17.0002 )
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 25.9619, 0, 17.0002 )
 
 [node name="Large Wall26" parent="Navigation/NavigationMeshInstance/Walls/LargeWalls" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 1.74845e-07, 0, 1, 0, -1.74845e-07, 0, 1, 23.0282, 0, 22.0002 )
@@ -1425,7 +1425,7 @@ transform = Transform( 3.0598e-07, 0, -1, 0, 1, 0, 1, 0, 3.0598e-07, -31.9718, 0
 transform = Transform( 3.0598e-07, 0, -1, 0, 1, 0, 1, 0, 3.0598e-07, -31.9718, 0, 19.0002 )
 
 [node name="Large Wall23" parent="Navigation/NavigationMeshInstance/Walls/LargeWalls" instance=ExtResource( 1 )]
-transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 26.0282, 0, 10.0002 )
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 25.9753, 0, 10.0002 )
 
 [node name="Large Wall15" parent="Navigation/NavigationMeshInstance/Walls/LargeWalls" instance=ExtResource( 1 )]
 transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -13.9718, 0, 0.000229836 )
@@ -1619,7 +1619,7 @@ transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 16, 0, -5
 transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 16, 0, 5 )
 
 [node name="SmallWall26" parent="Navigation/NavigationMeshInstance/Walls/SmallWalls" instance=ExtResource( 6 )]
-transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 26, 0, 20 )
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 25.9637, 0, 20 )
 
 [node name="SmallWall29" parent="Navigation/NavigationMeshInstance/Walls/SmallWalls" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 2, 3, 64 )
@@ -1723,7 +1723,7 @@ transform = Transform( 1, 0, 3.49691e-07, 0, 1, 0, -3.49691e-07, 0, 1, -27, 0, 1
 transform = Transform( -3.93403e-07, 0, 1, 0, 1, 0, -1, 0, -3.93403e-07, -27, 0, 17 )
 
 [node name="TightConvexWall10" parent="Navigation/NavigationMeshInstance/Walls/ConvexWalls" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 2.38419e-07, 0, 1, 0, -2.38419e-07, 0, 1, 26, 0, 7 )
+transform = Transform( 1, 0, 2.38419e-07, 0, 1, 0, -2.38419e-07, 0, 1, 25.9505, 0, 7 )
 
 [node name="TightConvexWall4" parent="Navigation/NavigationMeshInstance/Walls/ConvexWalls" instance=ExtResource( 7 )]
 transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 16, 0, 3 )
@@ -2279,12 +2279,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -11 )
 
 [node name="Plus Floor593" parent="Navigation/NavigationMeshInstance/Floors/PlusFloor" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, -13 )
-
-[node name="Plus Floor594" parent="Navigation/NavigationMeshInstance/Floors/PlusFloor" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -13 )
-
-[node name="Plus Floor595" parent="Navigation/NavigationMeshInstance/Floors/PlusFloor" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, -13 )
 
 [node name="Plus Floor596" parent="Navigation/NavigationMeshInstance/Floors/PlusFloor" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -13 )
@@ -3654,7 +3648,7 @@ transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 23, 0, 
 transform = Transform( 1, 0, 2.38419e-07, 0, 1, 0, -2.38419e-07, 0, 1, -13, 0, 25 )
 
 [node name="Stairs5" parent="Navigation/NavigationMeshInstance/Stairs" instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 2.38419e-07, 0, 1, 0, -2.38419e-07, 0, 1, 10, 0, 25 )
+transform = Transform( 1, 0, 2.38419e-07, 0, 1, 0, -2.38419e-07, 0, 1, 10, 0.098376, 25 )
 
 [node name="Stairs3" parent="Navigation/NavigationMeshInstance/Stairs" instance=ExtResource( 8 )]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 23, 3.05447, -18 )
@@ -3667,10 +3661,7 @@ transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 33, 0, 
 [node name="Enemies" type="Spatial" parent="."]
 
 [node name="EnemyStabby" parent="Enemies" instance=ExtResource( 9 )]
-transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 17 )
-
-[node name="EnemyStabby2" parent="Enemies" instance=ExtResource( 9 )]
-transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 10, 3, 31 )
+transform = Transform( -8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, 0, 0, 19 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7, 0.45588, 0 )
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 10, 0.45588, 19 )

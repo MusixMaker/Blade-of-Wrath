@@ -59,7 +59,7 @@ func _ready():
 func _physics_process(delta):
 	#Sets velocities and speed
 	#print(is_on_floor())#
-	#set X and Y velocities to 0
+	#set X and Z velocities to 0
 	vel.x = 0
 	vel.z = 0
 	movementSpeed = 5

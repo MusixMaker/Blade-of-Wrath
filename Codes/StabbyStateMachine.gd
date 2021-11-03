@@ -17,9 +17,10 @@ var direction
 var speed = 2
 var dead = false
 var vel = Vector3()
-var gravity = 30
+var gravity : float = 30
 var path = []
 var current_node = 0
+var pos = Position3D
 
 #Constats
 const TURN_SPEED = 2
@@ -58,8 +59,10 @@ func _physics_process(delta):
 				
 		if direction.length() < 1:
 			current_node += 1
+			state = IDLE
 		else:
 			move_and_slide(direction.normalized() * speed)
+			state = RUN
 	#if path_node < path.size():
 		#state = RUN
 	if health <= 0:
@@ -69,24 +72,9 @@ func _physics_process(delta):
 		IDLE:
 			ap.play("Idle")
 		RUN:
-			#var result = space_state.intersect_ray(global_transform.origin, target.global_transform.origin)
-			#if result.collider.is_in_group("Player"):
-			#	ap.play("Run")
-			#	eyes.look_at(target.global_transform.origin, Vector3.UP)
-			#	rotate_y(deg2rad(-eyes.rotation.y * TURN_SPEED))
-			#else:
-			#	state = IDLE
-			#var direction = (path[path_node] - global_transform.origin)
-			#if direction.length() < 1:
-				#path_node += 1
-			#else:
-				#move_and_slide(direction.normalised() * speed, Vector3.UP) 
-				#ap.play("Run")
-			#state = IDLE
-			pass
+			ap.play("Run")
 			
 		ATTACK:
-			eyes.look_at(target.global_transform.origin, Vector3.UP)
 			ap.play("Stabby")
 		DEAD:
 			ap.play("Die")

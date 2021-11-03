@@ -70,6 +70,6 @@ margin_bottom = 92.0
 text = "Return"
 
 [connection signal="pressed" from="MenuContainer/InnerMenu/VBoxContainer/Buttons/Buttons/Audio" to="." method="_on_Audio_pressed"]
-[connection signal="pressed" from="MenuContainer/InnerMenu/VBoxContainer/Buttons/Buttons/Fps" to="." method="_on_Sfx_pressed"]
 [connection signal="pressed" from="MenuContainer/InnerMenu/VBoxContainer/Buttons/Buttons/Fps" to="." method="_on_Fps_pressed"]
+[connection signal="pressed" from="MenuContainer/InnerMenu/VBoxContainer/Buttons/Buttons/Fps" to="." method="_on_Sfx_pressed"]
 [connection signal="pressed" from="MenuContainer/InnerMenu/VBoxContainer/Buttons/Buttons/Return" to="." method="_on_Return_pressed"]

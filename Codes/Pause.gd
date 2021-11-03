@@ -39,6 +39,7 @@ func _on_Restart_pressed():
 	get_tree().change_scene("res://Scenes/Test Level.tscn")
 	$Background.visible = !$Background.visible
 	get_tree().paused = !get_tree().paused
+	PlayerStats.PLAYER_HEALTH = PlayerStats.MAX_PLAYER_HEALTH
 	if get_tree().paused:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)
 	else:
