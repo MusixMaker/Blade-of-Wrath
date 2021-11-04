@@ -21,6 +21,8 @@ var gravity : float = 30
 var path = []
 var current_node = 0
 var pos = Position3D
+var m = SpatialMaterial.new()
+var camrot = 0.0
 
 #Constats
 const TURN_SPEED = 2
@@ -32,6 +34,7 @@ onready var eyes = $Eyes
 onready var attacktimer = $StabTimer
 onready var nav = $"../../Navigation" as Navigation
 onready var player = $"../../Player" as KinematicBody
+onready var draw = $"../../Navigation/Draw"
 
 #Functions
 func _ready():
@@ -53,16 +56,17 @@ func _on_SightRange_body_exited(body):
 
 #State machine and death time
 func _physics_process(delta):
+	
 	update_path(player.global_transform.origin)
 	if current_node < path.size():
 		var direction: Vector3 = path[current_node] - global_transform.origin
-				
 		if direction.length() < 1:
 			current_node += 1
 			state = IDLE
 		else:
 			move_and_slide(direction.normalized() * speed)
 			state = RUN
+			draw_path(path)
 	#if path_node < path.size():
 		#state = RUN
 	if health <= 0:
@@ -106,6 +110,16 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		#If yo aint dead, this is ignored here
 		pass
 
+func draw_path(path_array):
+	var im = get_node(draw)
+	im.begin(Mesh.PRIMITIVE_POINTS, null)
+	im.add_vertex(path_array[0])
+	im.add_vertex(path_array[path_array.size() - 1])
+	im.end()
+	im.begin(Mesh.PRIMITIVE_LINE_STRIP, null)
+	for x in path:
+		im.add_vertex(x)
+	im.end()
 
 #func _on_WalkTimer_timeout():
 	#move_to(player.global_transform.origin)

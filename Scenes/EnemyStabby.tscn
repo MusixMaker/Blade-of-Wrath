@@ -1533,6 +1533,7 @@ cast_to = Vector3( 0, 0, 6.5 )
 [node name="Eyes" type="Spatial" parent="."]
 
 [node name="StabTimer" type="Timer" parent="."]
+wait_time = 0.5
 autostart = true
 
 [node name="Cube2" type="MeshInstance" parent="."]
