@@ -111,7 +111,7 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		pass
 
 func draw_path(path_array):
-	var im = get_node(draw)
+	var im = get_node("draw")
 	im.begin(Mesh.PRIMITIVE_POINTS, null)
 	im.add_vertex(path_array[0])
 	im.add_vertex(path_array[path_array.size() - 1])
