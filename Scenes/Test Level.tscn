@@ -25,6 +25,9 @@ polygon/verts_per_poly = 10.0
 [node name="Level" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0 )
 
+[node name="Player" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 10, 0.45588, 19 )
+
 [node name="Roof" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.990872, 0 )
 
@@ -3658,12 +3661,9 @@ transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 33, 0, 
 
 [node name="Lamps" type="Spatial" parent="Navigation/NavigationMeshInstance"]
 
-[node name="Draw" type="ImmediateGeometry" parent="Navigation"]
+[node name="Enemies" type="Spatial" parent="Navigation"]
 
-[node name="Enemies" type="Spatial" parent="."]
-
-[node name="EnemyStabby" parent="Enemies" instance=ExtResource( 9 )]
+[node name="EnemyStabby" parent="Navigation/Enemies" instance=ExtResource( 9 )]
 transform = Transform( -8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, 0, 0, 19 )
 
-[node name="Player" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 10, 0.45588, 19 )
+[node name="Draw" type="ImmediateGeometry" parent="Navigation"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=63 format=2]
 
-[ext_resource path="res://Codes/StabbyStateMachine.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/EnemyStabbyPathfinding.gd" type="Script" id=1]
 
 [sub_resource type="SpatialMaterial" id=1]
 vertex_color_use_as_albedo = true
@@ -453,7 +453,7 @@ surfaces/0 = {
 }
 
 [sub_resource type="BoxShape" id=51]
-extents = Vector3( 4.67434, 1, 12.2875 )
+extents = Vector3( 0.68087, 1, 4.78935 )
 
 [sub_resource type="Animation" id=52]
 length = 0.001
@@ -1333,10 +1333,7 @@ tracks/16/keys = PoolRealArray( 0, 1, 0, 1.62864, 0, -2.98023e-08, 0, 0, 1, 1, 1
 [sub_resource type="CapsuleShape" id=61]
 height = 3.26023
 
-[node name="EnemyStabby" type="KinematicBody" groups=[
-"Enemy",
-]]
-transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+[node name="EnemyStabby" type="KinematicBody" groups=["Enemy"]]
 script = ExtResource( 1 )
 
 [node name="Armature" type="Spatial" parent="."]
@@ -1519,10 +1516,10 @@ mesh = SubResource( 50 )
 material/0 = null
 
 [node name="SightRange" type="Area" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.87686, 0, 2.96495, 0 )
+transform = Transform( 20.543, 0, 0, 0, 1.1586, 0, 0, 0, 10.2085, 0, 2.96495, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="SightRange"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.703428, 0, 0, 8.70082 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.703428, 0, 0, 3.44589 )
 shape = SubResource( 51 )
 
 [node name="RayCast" type="RayCast" parent="."]
@@ -1539,12 +1536,15 @@ autostart = true
 [node name="Cube2" type="MeshInstance" parent="."]
 transform = Transform( 0.119594, -3.51323e-09, -3.15458e-08, 2.85135e-08, 0.0147355, 0.132313, -2.5493e-15, -0.234031, 0.00833095, 0.00563605, 0.0894466, 0.0780967 )
 visible = false
+skeleton = NodePath("../..")
 
 [node name="Cube0012" type="MeshInstance" parent="."]
 transform = Transform( 0.327693, 9.38623e-09, -7.75622e-08, 7.8128e-08, -0.0393685, 0.32532, 4.42396e-14, -0.32532, -0.0393685, -0.00699533, 0.0184791, 0.19023 )
 visible = false
+skeleton = NodePath("../..")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../..")
 anims/Cube001Action001 = SubResource( 52 )
 anims/CubeAction = SubResource( 53 )
 anims/Die = SubResource( 54 )
@@ -1563,8 +1563,7 @@ shape = SubResource( 61 )
 wait_time = 2.0
 autostart = true
 
+[node name="EnemyStabby" type="Navigation" parent="." groups=["Enemy"]]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+
 [connection signal="body_entered" from="SightRange" to="." method="_on_SightRange_body_entered"]
-[connection signal="body_exited" from="SightRange" to="." method="_on_SightRange_body_exited"]
-[connection signal="timeout" from="StabTimer" to="." method="_on_StabTimer_timeout"]
-[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
-[connection signal="timeout" from="WalkTimer" to="." method="_on_WalkTimer_timeout"]
