@@ -1,6 +1,8 @@
 extends KinematicBody
 
-const SPEED = 10.0
+const SPEED = 2
+var gravity : float = 9.8
+var vel = Vector3()
 
 
 
@@ -14,6 +16,7 @@ onready var player_pos = $"../../../Player"
 
 
 func _physics_process(delta):
+	vel.y -= gravity * delta
 	var direction = Vector3()
 
 	# We need to scale the movement speed by how much delta has passed,

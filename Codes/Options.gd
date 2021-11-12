@@ -1,5 +1,7 @@
 extends Control
 
+var fps = is_in_group("fps")
+
 func _ready():
 	pass
 	
@@ -10,7 +12,7 @@ func _on_Audio_pressed():
 
 
 func _on_Fps_pressed():
-	pass # Replace with function body.
+	fps.hide()
 
 
 func _on_Return_pressed():

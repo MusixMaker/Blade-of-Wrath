@@ -2,6 +2,7 @@ extends CanvasLayer
 
 #Pause starts off as false
 var pause = false
+var fps = is_in_group("fps")
 
 func _ready():
 	pass
@@ -26,8 +27,7 @@ func _on_Audio_pressed():
 
 
 func _on_Fps_pressed():
-	#Replace with function body
-	pass
+	fps.hide()
 
 
 func _on_Quit_pressed():

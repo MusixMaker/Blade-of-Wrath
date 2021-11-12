@@ -16,15 +16,32 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
+[node name="Health" type="ProgressBar" parent="."]
 margin_right = 285.0
 margin_bottom = 36.0
-custom_styles/fg = SubResource( 1 )
-custom_styles/bg = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
 value = 50.0
 percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 1899.88
+margin_right = 1919.88
+margin_bottom = 15.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fps_label" type="Label" parent="ColorRect" groups=["fps"]]
+margin_right = 20.0
+margin_bottom = 15.0
+align = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
