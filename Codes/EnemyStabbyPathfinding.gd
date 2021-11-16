@@ -1,21 +1,32 @@
 extends KinematicBody
 
+enum{
+	IDLE,
+	ATTACK,
+	STABBED,
+	RUN,
+	WALK,
+	DEAD
+}
 
 var gravity : float = 9.8
 var vel = Vector3()
 var target = Vector3.ZERO
-
-
-
-
+var space_state
 var path = []
 var path_node = 0
 var show_path = true
-var speed = 1
+var speed = 5
 var seen = false
-onready var nav = get_parent().get_parent()
+var state = IDLE
+var health = 400
+var dead = false
 
+onready var nav = get_parent().get_parent()
 onready var player_pos = $"../../../Player"
+onready var ap = $AnimationPlayer
+onready var attacktimer = $StabTimer
+onready var ray = $RayCast
 
 func new_path():
 	target = player_pos.global_transform.origin
@@ -34,29 +45,56 @@ func _physics_process(delta):
 			else:
 				look_at(player_pos.global_transform.origin - direction.normalized(), Vector3.UP)
 				move_and_slide(direction.normalized() * speed, Vector3.UP)
+				new_path()
 			
 		else:
 			new_path()
-		if $RayCast.is_colliding():
-			if $RayCast.get_collider().is_in_group("Player"):
-				pass
-			elif $RayCast.get_collider():
-				pass
-
+	if health <= 0:
+		state = DEAD
+		
+	match state:
+		IDLE:
+			ap.play("Idle")
+		RUN:
+			ap.play("Run")
+		ATTACK:
+			ap.play("Stabby")
+		DEAD:
+			ap.play("Die")
+			dead = true
 
 
 func _on_SightRange_body_entered(body):
 	if body.is_in_group("Player"):
-		print("see player")
 		seen = true
 		path = new_path()
+		state = RUN
+		attacktimer.start()
 
 		
 
 
 
 func _on_SightRange_body_exited(body):
-	return
 	if body.is_in_group("Player"):
-		print("not see player")
 		seen = false
+		attacktimer.stop()
+
+
+
+func _on_StabTimer_timeout():
+	if ray.is_colliding():
+		var hit = ray.get_collider()
+		if hit.is_in_group("Player"):
+			print("Hit")
+			PlayerStats.PLAYER_HEALTH -= 10
+			state = ATTACK
+			attacktimer.start()
+
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if dead == true:
+		queue_free()
+	else:
+		#If yo aint dead, this is ignored here
+		pass
