@@ -1,6 +1,6 @@
 extends KinematicBody
 
-#State machine
+#State machine declarer
 enum{
 	IDLE,
 	WALK,
@@ -12,9 +12,6 @@ enum{
 }
 
 #Stats
-#var cur_hp : int = 100
-#var max_hp : int = 100
-var score : int = 0
 var state = IDLE
 var melee_damage = 50
 
@@ -58,7 +55,6 @@ func _ready():
 
 func _physics_process(delta):
 	#Sets velocities and speed
-	#print(is_on_floor())#
 	#set X and Z velocities to 0
 	vel.x = 0
 	vel.z = 0
@@ -95,12 +91,14 @@ func _physics_process(delta):
 	if Input.is_action_just_released("move_right"):
 		walking = false
 		
+		#Sprint
 	if Input.is_action_pressed("sprint") and walking == true and state != ATTACK:
 		walking = false
 		sprint = true
 		movementSpeed = 10
 		state = RUN
 		
+		#Walk
 	if Input.is_action_just_released("sprint"):
 		sprint = false
 		movementSpeed =5
@@ -154,6 +152,7 @@ func _process(delta):
 	#reset the mouse delta vector
 	mouseDelta = Vector2()
 	
+	#State machine, to play the different animations
 	match state:
 		IDLE:
 			ap.play("Idle")
@@ -170,6 +169,7 @@ func _process(delta):
 		DIE:
 			ap.play("Die")
 
+#Gets mouse input
 func _input(event):
 	if event is InputEventMouseMotion:
 		mouseDelta = event.relative

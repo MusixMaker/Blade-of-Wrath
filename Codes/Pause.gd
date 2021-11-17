@@ -22,12 +22,13 @@ func _input(event):
 
 
 func _on_Audio_pressed():
-	#Replace with function body
+	#Mutes audio (If it worked)
 	pass
 
 
 func _on_Fps_pressed():
-	fps.hide()
+	#Hides fps counter (If it worked)
+	pass
 
 
 func _on_Quit_pressed():

@@ -5374,9 +5374,9 @@ transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 33, 0, 
 
 [node name="Lamps" type="Spatial" parent="Navigation/NavigationMeshInstance"]
 
+[node name="Draw" type="ImmediateGeometry" parent="Navigation"]
+
 [node name="Enemies" type="Spatial" parent="Navigation"]
 
-[node name="EnemyStabby" parent="Navigation/Enemies" instance=ExtResource( 9 )]
+[node name="EnemyStabby" parent="." instance=ExtResource( 9 )]
 transform = Transform( -0.2, 0, -1.74846e-08, 0, 0.2, 0, 1.74846e-08, 0, -0.2, -2, 3, 35 )
-
-[node name="Draw" type="ImmediateGeometry" parent="Navigation"]

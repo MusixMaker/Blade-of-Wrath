@@ -25,7 +25,7 @@ PlayerStats="*res://Codes/PlayerStats.gd"
 
 [display]
 
-window/size/width=1920
+window/size/width=1366
 window/size/height=1080
 window/size/fullscreen=true
 
